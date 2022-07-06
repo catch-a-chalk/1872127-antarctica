@@ -1,15 +1,209 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <title>Круизы в Антарктику</title>
+    <link rel="preload" href="fonts/montserrat.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratbold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
   </head>
-  <body>
-    <div class="wrapper">
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__link" href="#" aria-label="На главную страницу">
+          <svg class="page-header__logo page-header__logo--visible-mobile" width="42" height="22">
+            <use href="img/sprite.svg#logo-hills-mobile"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo--visible-tablet" width="38" height="20">
+            <use href="img/sprite.svg#logo-hills-tablet"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo--visible-desktop" width="70" height="38">
+            <use href="img/sprite.svg#logo-hills-desktop"></use>
+          </svg>
+        </a>
+        <!-- Можно добавить класс page-nav--closed -->
+        <!-- Можно добавить класс page-nav--opened -->
+        <!-- Можно добавить класс page-nav--nojs -->
+        <nav class="page-nav page-nav--closed page-nav--nojs">
+          <button class="page-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="page-nav__list">
+            <li class="page-nav__item">
+              <a class="page-nav__link" href="#">
+                <span class="page-nav__text">Преимущества</span>
+              </a>
+            </li>
+            <li>
+              <a class="page-nav__link" href="#">
+                <span class="page-nav__text">Направления</span>
+              </a>
+            </li>
+            <li>
+              <a class="page-nav__link" href="#">
+                <span class="page-nav__text">Ближайшие круизы</span>
+              </a>
+            </li>
+            <li>
+              <a class="page-nav__link" href="#">
+                <span class="page-nav__text">Контакты</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Круизы в Антарктикую. Волшебный мир айсбергов и пингвинов</h1>
+      <section class="main-header">
+        <h2 class="visually-hidden">Приветствующая секция</h2>
+        <div class="main-header__wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/header-bg-desktop@1x.webp, img/header-bg-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/header-bg-tablet@1x.webp, img/header-bg-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/header-bg-mobile@1x.webp, img/header-bg-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1366px)" srcset="img/header-bg-desktop@1x.jpg, img/header-bg-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/header-bg-tablet@1x.jpg, img/header-bg-tablet@2x.jpg 2x">
+            <img src="img/header-bg-mobile@1x.jpg" srcset="img/header-bg-mobile@2x.jpg" alt="Антарктический пейзаж">
+          </picture>
+          <dl class="main-header__list">
+            <dt class="main-header__title">Круизы в Антарктику</dt>
+            <dd class="main-header__description">Волшебный мир айсбергов и пингвинов</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section class="main-description">
+        <h2 class="visually-hidden">Секция с описанием путешествия</h2>
+        <div class="main-description__wrapper">
+          <dl class="main-description__list">
+            <dt class="main-description__title">Путешествие на край Земли</dt>
+            <dd class="main-description__description">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section class="main-advantages">
+        <h2 class="visually-hidden">Секция с преимуществами</h2>
+        <div class="main-advantages__wrapper">
+          <p class="main-advantages__title">Преимущества</p>
+          <div class="main-advantages__container">
+            <!-- Вставить еще две карточки после утверждения формата -->
+            <div class="main-advantages__card">
+              <svg class="main-advantages__logo" width="27" height="32">
+                <use href="img/sprite.svg#logo-ship"></use>
+              </svg>
+              <dl class="main-advantages__list">
+                <dt class="main-advantages__title">Небольшой круизный лайнер</dt>
+                <dd class="main-advantages__description">Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-cruise">
+        <h2 class="visually-hidden">Секция с ближайшими круизами</h2>
+        <div class="main-cruise__wrapper">
+          <p class="main-cruise__title">Ближайшие круизы</p>
+          <div class="main-cruise__container">
+            <!-- Закрытая карточка -->
+            <div class="main-cruise__card">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/astoria-desktop@1x.webp, img/astoria-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/astoria-tablet@1x.webp, img/astoria-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/astoria-mobile@1x.webp, img/astoria-mobile@2x.webp 2x">
+    
+                <source media="(min-width: 1366px)" srcset="img/astoria-desktop@1x.jpg, img/astoria-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/astoria-tablet@1x.jpg, img/astoria-tablet@2x.jpg 2x">
+                <img src="img/astoria-mobile@1x.jpg" srcset="img/astoria-mobile@2x.jpg" alt="Пейзаж круиза “Астория”">
+              </picture>
+              <p class="main-cruise__name">Круиз “Астория”</p>
+            </div>
+            <!-- Открытая карточка -->
+            <div class="main-cruise__card main-cruise__card--reverse">
+              <p class="main-cruise__name">Круиз “Элайн”</p>
+              <dl class="main-cruise__list">
+                <dt class="main-cruise__point">Маршрут</dt>
+                <dd class="main-cruise__description">Аргентина - Фолклендские острова - Антарктида - Чили</dd>
+                <dt class="main-cruise__point">Порт отправления</dt>
+                <dd class="main-cruise__description">Буэнос-Айрес</dd>
+                <dt class="main-cruise__point">Продолжительность</dt>
+                <dd class="main-cruise__description">20 дней</dd>
+                <dt class="main-cruise__point">Цена</dt>
+                <dd class="main-cruise__description">от 14500 $</dd>
+              </dl>
+              <button class="main-cruise__button" type="button">
+                <span>Забронировать</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-ordering">
+        <h2 class="visually-hidden">Секция с бронированием</h2>
+        <div class="main-ordering__wrapper">
+          <dl class="main-ordering__list">
+            <dt class="main-ordering__title">Раннее бронирование</dt>
+            <dd class="main-ordering__description">Забронируйте тур за 3-6 месяцев
+              до даты выезда и сэкономьте до 50%
+            </dd>
+          </dl>
+          <div class="main-ordering__container">
+            <p class="main-ordering__text">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+            <form class="main-ordering__form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="main-ordering__group">
+                <label class="visually-hidden" for="form-name">Имя</label>
+                <input class="main-ordering__field" type="text" id="form-name" placeholder="Имя">
+              </p>
+              <p class="main-ordering__group">
+                <label class="visually-hidden" for="form-tel">Телефон</label>
+                <input class="main-ordering__field" type="tel" id="form-tel" placeholder="Телефон">
+              </p>
+              <p class="main-ordering__group">
+                <label class="visually-hidden" for="form-email">Email</label>
+                <input class="main-ordering__field" type="email" id="form-email" placeholder="Email">
+              </p>
+              <button class="main-ordering__button" type="submit">Оставить заявку</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-contacts">
+        <h2 class="visually-hidden">Секция с контактами</h2>
+        <div class="main-contacts__wrapper">
+          <div class="main-contacts__map">
+            <!-- Сюда вставить интерактивную карту -->
+          </div>
+          <div class="main-contacts__data">
+            <p class="main-contacts__bold">У вас ещё остались вопросы или сомнения?
+              Приезжайте к нам в офис и мы вам все расскажем.
+            </p>
+            <!-- Вставить иконку псевдоэлементом? -->
+            <p class="main-contacts__text">г. Санкт Петербург, ул. Большая Конюшенная, 19/8</p>
+            <a href="tel:+78002000000">8-800-200-00-00</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <!-- Можем ли мы обыграть ту же самую навигацию, не вставляя её сюда повторно? -->
+      </div>
+    </footer>
+    
+    <!-- Закомментированный исходный код, удаляем?-->
+    <!-- <div class="wrapper">
       <header>
         <div class="container"></div>
       </header>
@@ -27,10 +221,10 @@
       <footer>
         <div class="container"></div>
       </footer>
-    </div>
+    </div> -->
 
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <!-- <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -59,6 +253,6 @@
     </div>
 
     <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script> -->
   </body>
 </html>

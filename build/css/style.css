@@ -392,6 +392,38 @@ template {
   src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("source/fonts/montserratbold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("source/fonts/montserratbold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("source/fonts/montserrat.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("source/fonts/montserrat.woff2") format("woff2");
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -751,6 +783,156 @@ button,
   pointer-events: auto;
 }
 
+.page__body {
+  font-family: "Montserrat", "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.page-header {
+  position: relative;
+}
+
+.page-header picture {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.page-header__wrapper {
+  width: 1366px;
+  margin: 0 auto;
+  padding: 35px 103px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.page-header__logo--visible-mobile {
+  display: block;
+}
+
+.page-header__logo--visible-tablet {
+  display: block;
+}
+
+.page-header__logo--visible-desktop {
+  display: none;
+}
+
+.page-nav__toggle {
+  position: absolute;
+  padding: 0;
+  right: -22px;
+  top: -12px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.page-nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.page-nav__item {
+  margin-left: 33px;
+}
+
+.page-nav__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.5px;
+  color: #f9fbfd;
+}
+
+.main-header {
+  min-height: 542px;
+  color: #f9fbfd;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.main-header__wrapper {
+  width: 1366px;
+  margin: 0 auto;
+  padding: 175px 198px;
+}
+
+.main-header__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+}
+
+.main-header__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.main-description {
+  min-height: 541px;
+  color: #011c40;
+}
+
+.main-description__wrapper {
+  width: 1366px;
+  margin: 0 auto;
+  padding: 120px 103px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+  grid-template-columns: repeat(2, 50%);
+}
+
+.main-description__wrapper picture {
+  justify-self: flex-end;
+}
+
+.main-description__list {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.main-description__title {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.main-description__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -765,6 +947,26 @@ button,
   }
 }
 
+@media (min-width: 768px) {
+  .page-header__logo--visible-mobile {
+    display: none;
+  }
+
+  .page-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1366px) {
+  .page-header__logo--visible-tablet {
+    display: none;
+  }
+
+  .page-header__logo--visible-desktop {
+    display: block;
+  }
+}
+
 @media (max-width: 1439px) {
   .container {
     padding: 0 32px;
@@ -774,6 +976,12 @@ button,
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header__logo--visible-tablet {
+    display: none;
   }
 }
 

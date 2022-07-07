@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
     <title>Круизы в Антарктику</title>
-    <link rel="preload" href="fonts/montserrat.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/montserratbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/montserrat.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/montserratbold.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="js/script.js" as="script">
@@ -17,13 +17,13 @@
       <div class="page-header__wrapper">
         <a class="page-header__link" href="#" aria-label="На главную страницу">
           <svg class="page-header__logo page-header__logo--visible-mobile" width="42" height="22">
-            <use href="img/sprite.svg#logo-hills-mobile"></use>
+            <use href="img/sprite_auto.svg#logo-hills-mobile"></use>
           </svg>
           <svg class="page-header__logo page-header__logo--visible-tablet" width="38" height="20">
-            <use href="img/sprite.svg#logo-hills-tablet"></use>
+            <use href="img/sprite_auto.svg#logo-hills-tablet"></use>
           </svg>
           <svg class="page-header__logo page-header__logo--visible-desktop" width="70" height="38">
-            <use href="img/sprite.svg#logo-hills-desktop"></use>
+            <use href="img/sprite_auto.svg#logo-hills-desktop"></use>
           </svg>
         </a>
         <!-- Можно добавить класс page-nav--closed -->
@@ -39,17 +39,17 @@
                 <span class="page-nav__text">Преимущества</span>
               </a>
             </li>
-            <li>
+            <li class="page-nav__item">
               <a class="page-nav__link" href="#">
                 <span class="page-nav__text">Направления</span>
               </a>
             </li>
-            <li>
+            <li class="page-nav__item">
               <a class="page-nav__link" href="#">
                 <span class="page-nav__text">Ближайшие круизы</span>
               </a>
             </li>
-            <li>
+            <li class="page-nav__item">
               <a class="page-nav__link" href="#">
                 <span class="page-nav__text">Контакты</span>
               </a>
@@ -57,6 +57,15 @@
           </ul>
         </nav>
       </div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1366px)" srcset="img/header-bg-desktop@1x.webp, img/header-bg-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/header-bg-tablet@1x.webp, img/header-bg-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/header-bg-mobile@1x.webp, img/header-bg-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1366px)" srcset="img/header-bg-desktop@1x.jpg, img/header-bg-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/header-bg-tablet@1x.jpg, img/header-bg-tablet@2x.jpg 2x">
+        <img src="img/header-bg-mobile@1x.jpg" srcset="img/header-bg-mobile@2x.jpg" alt="Антарктический пейзаж">
+      </picture>
     </header>
 
     <main class="page-main">
@@ -64,15 +73,6 @@
       <section class="main-header">
         <h2 class="visually-hidden">Приветствующая секция</h2>
         <div class="main-header__wrapper">
-          <picture>
-            <source type="image/webp" media="(min-width: 1366px)" srcset="img/header-bg-desktop@1x.webp, img/header-bg-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/header-bg-tablet@1x.webp, img/header-bg-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/header-bg-mobile@1x.webp, img/header-bg-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1366px)" srcset="img/header-bg-desktop@1x.jpg, img/header-bg-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/header-bg-tablet@1x.jpg, img/header-bg-tablet@2x.jpg 2x">
-            <img src="img/header-bg-mobile@1x.jpg" srcset="img/header-bg-mobile@2x.jpg" alt="Антарктический пейзаж">
-          </picture>
           <dl class="main-header__list">
             <dt class="main-header__title">Круизы в Антарктику</dt>
             <dd class="main-header__description">Волшебный мир айсбергов и пингвинов</dd>
@@ -85,8 +85,17 @@
         <div class="main-description__wrapper">
           <dl class="main-description__list">
             <dt class="main-description__title">Путешествие на край Земли</dt>
-            <dd class="main-description__description">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</dd>
+            <dd class="main-description__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</dd>
           </dl>
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/penguins-desktop@1x.webp, img/penguins-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/penguins-tablet@1x.webp, img/penguins-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/penguins-mobile@1x.webp, img/penguins-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1366px)" srcset="img/penguins-desktop@1x.jpg, img/penguins-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/penguins-tablet@1x.jpg, img/penguins-tablet@2x.jpg 2x">
+            <img src="img/penguins-mobile@1x.jpg" srcset="img/penguins-mobile@2x.jpg" alt="Пингвинчики">
+          </picture>
         </div>
       </section>
 
@@ -98,7 +107,7 @@
             <!-- Вставить еще две карточки после утверждения формата -->
             <div class="main-advantages__card">
               <svg class="main-advantages__logo" width="27" height="32">
-                <use href="img/sprite.svg#logo-ship"></use>
+                <use href="img/sprite_auto.svg#logo-ship"></use>
               </svg>
               <dl class="main-advantages__list">
                 <dt class="main-advantages__title">Небольшой круизный лайнер</dt>
@@ -120,7 +129,7 @@
                 <source type="image/webp" media="(min-width: 1366px)" srcset="img/astoria-desktop@1x.webp, img/astoria-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/astoria-tablet@1x.webp, img/astoria-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/astoria-mobile@1x.webp, img/astoria-mobile@2x.webp 2x">
-    
+
                 <source media="(min-width: 1366px)" srcset="img/astoria-desktop@1x.jpg, img/astoria-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/astoria-tablet@1x.jpg, img/astoria-tablet@2x.jpg 2x">
                 <img src="img/astoria-mobile@1x.jpg" srcset="img/astoria-mobile@2x.jpg" alt="Пейзаж круиза “Астория”">
@@ -201,7 +210,7 @@
         <!-- Можем ли мы обыграть ту же самую навигацию, не вставляя её сюда повторно? -->
       </div>
     </footer>
-    
+
     <!-- Закомментированный исходный код, удаляем?-->
     <!-- <div class="wrapper">
       <header>

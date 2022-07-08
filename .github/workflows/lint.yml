@@ -1,0 +1,25 @@
+name: Проверки
+
+on:
+  pull_request:
+    branches: "*"
+
+jobs:
+  build:
+    name: Линтинг
+    runs-on: ubuntu-latest
+    steps:
+      - name: Настраиваем Ноду
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+
+      - uses: actions/checkout@master
+        name: Checkout
+
+      - name: Устанавливем зависимости
+        run: |
+          npm i
+      - name: Запускаем линтинг
+        run: |
+          npm run lint

@@ -1,0 +1,75 @@
+.main-cruise__wrapper {
+  width: $vp-1366;
+  margin: 0 auto;
+  padding: 120px 118px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-cruise__title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  margin: 0 0 60px 0;
+  color: $color-tangaroa;
+  text-align: center;
+}
+
+.main-cruise__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.main-cruise__card {
+  position: relative;
+  width: 260px;
+  color: $color-alice-blue;
+  background-color: $color-tangaroa;
+}
+
+.main-cruise__card--reverse {
+  padding: 35px 25px;
+}
+
+.main-cruise__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+}
+
+.main-cruise__name--closed {
+  position: absolute;
+  top: 88%;
+  left: 10%;
+}
+
+.main-cruise__list {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.main-cruise__point {
+  font-weight: 500;
+}
+
+.main-cruise__description {
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  color: $color-quartz;
+}
+
+.main-cruise__button {
+  padding: 14px 46px;
+  background-color: $color-alice-blue;
+  border: none;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: $color-tangaroa;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}

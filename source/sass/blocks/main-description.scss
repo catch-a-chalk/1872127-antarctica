@@ -1,0 +1,34 @@
+.main-description {
+  min-height: 541px;
+  color: $color-tangaroa;
+}
+
+.main-description__wrapper {
+  width: $vp-1366;
+  margin: 0 auto;
+  padding: 120px 103px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+
+  picture {
+    justify-self: flex-end;
+  }
+}
+
+.main-description__list {
+  align-self: center;
+}
+
+.main-description__title {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.main-description__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}

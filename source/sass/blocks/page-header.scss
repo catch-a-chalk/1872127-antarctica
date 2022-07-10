@@ -1,0 +1,49 @@
+.page-header {
+  position: relative;
+
+  picture {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.page-header__wrapper {
+  width: $vp-1366;
+  margin: 0 auto;
+  padding: 35px 103px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo--visible-mobile {
+  display: block;
+
+  @media (min-width: $vp-768) {
+    display: none;
+  }
+}
+
+.page-header__logo--visible-tablet {
+  display: block;
+
+  @media (max-width: $vp-768) {
+    display: none;
+  }
+
+  @media (min-width: $vp-1366) {
+    display: none;
+  }
+}
+
+.page-header__logo--visible-desktop {
+  display: none;
+
+  @media (min-width: $vp-1366) {
+    display: block;
+  }
+}

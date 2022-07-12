@@ -1,0 +1,37 @@
+.page-footer {
+  background-color: $color-tangaroa;
+}
+
+.page-footer__wrapper {
+  padding: 50px 103px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer__list {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: -225px;
+}
+
+.page-footer__logotype {
+  margin-right: 40px;
+}
+
+.page-footer__item {
+  margin-right: 33px;
+}
+
+.page-footer__link {
+  color: $color-alice-blue;
+}
+
+.page-footer__ref {
+  margin-left: 28px;
+}

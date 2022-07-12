@@ -1,0 +1,31 @@
+name: Сборка и деплой
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: "*"
+
+jobs:
+  build:
+    name: Сборка
+    runs-on: ubuntu-latest
+    steps:
+      - name: Настраиваем Ноду 🛎️
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+
+      - uses: actions/checkout@master
+        name: Checkout
+
+      - name: Устанавливаем зависимости и собираем 🏗️
+        run: |
+          npm i
+          npm run build
+
+      - name: Деплой 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.

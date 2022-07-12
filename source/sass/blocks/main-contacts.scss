@@ -1,0 +1,52 @@
+.main-contacts {
+  color: $color-tangaroa;
+  font-style: normal;
+}
+
+.main-contacts__wrapper {
+  width: $vp-1366;
+  margin: 0 auto;
+  padding: 120px 103px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-column-gap: 100px;
+}
+
+.main-contacts__data {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .main-contacts__text,
+  a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.main-contacts__bold {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.main-contacts__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.main-contacts__item {
+  margin-bottom: 33px;
+}
+
+.main-contacts__logo {
+  float: left;
+  margin-right: 10px;
+}
+
+.main-contacts__text {
+  margin: 0;
+}

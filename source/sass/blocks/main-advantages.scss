@@ -1,0 +1,66 @@
+.main-advantages {
+  min-height: 562px;
+  color: $color-tangaroa;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $color-solitude;
+}
+
+.main-advantages__wrapper {
+  width: $vp-1366;
+  margin: 0 auto;
+  display: grid;
+  grid-row-gap: 60px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  z-index: 1;
+}
+
+.main-advantages__image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-advantages__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  margin: 0;
+}
+
+.main-advantages__container {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-column-gap: 20px;
+  justify-content: center;
+}
+
+.main-advantages__card {
+  width: 360px;
+  box-sizing: border-box;
+  padding: 30px;
+  background-color: $color-alice-blue;
+  display: grid;
+  grid-row-gap: 22px;
+}
+
+.main-advantages__header {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 20px;
+}
+
+.main-advantages__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}

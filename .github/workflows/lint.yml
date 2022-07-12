@@ -9,7 +9,7 @@ jobs:
     name: Линтинг
     runs-on: ubuntu-latest
     steps:
-      - name: Настраиваем Ноду
+      - name: Настраиваем Ноду 🛎️
         uses: actions/setup-node@v1
         with:
           node-version: "14"
@@ -17,9 +17,7 @@ jobs:
       - uses: actions/checkout@master
         name: Checkout
 
-      - name: Устанавливем зависимости
+      - name: Проверяем код 🧪
         run: |
           npm i
-      - name: Запускаем линтинг
-        run: |
           npm run lint

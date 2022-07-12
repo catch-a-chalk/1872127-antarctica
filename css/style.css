@@ -991,7 +991,11 @@ button,
   background-color: #f9fbfd;
   display: -ms-grid;
   display: grid;
-  grid-row-gap: 22px;
+  -ms-grid-rows: 50px 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .main-advantages__header {
@@ -1042,76 +1046,155 @@ button,
 
 .main-cruise__card {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 260px;
+  padding: 28px 25px 35px;
   color: #f9fbfd;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), to(#011c40));
+  background-image: -o-linear-gradient(top, transparent 50%, #011c40 100%);
+  background-image: linear-gradient(180deg, transparent 50%, #011c40 100%);
+  -webkit-transition-property: background-color, -webkit-box-shadow;
+  transition-property: background-color, -webkit-box-shadow;
+  -o-transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  width: 260px;
+  min-height: 386px;
+}
+
+.main-cruise__card:hover,
+.main-cruise__card:focus-within {
   background-color: #011c40;
+  -webkit-box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
 }
 
-.main-cruise__card :hover {
-  cursor: pointer;
+.main-cruise__card:hover .main-cruise__name,
+.main-cruise__card:focus-within .main-cruise__name {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 
-.main-cruise__card :hover .main-cruise__image {
-  opacity: 0;
-}
-
-.main-cruise__card :hover + .main-cruise__list {
+.main-cruise__card:hover .main-cruise__info,
+.main-cruise__card:focus-within .main-cruise__info,
+.main-cruise__card:hover .main-cruise__cta,
+.main-cruise__card:focus-within .main-cruise__cta {
   opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 
-.main-cruise__card :hover ~ .main-cruise__name {
-  top: 0;
+.main-cruise__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .main-cruise__name {
-  font-weight: 500;
+  margin: 0 0 14px;
   font-size: 18px;
-  line-height: 27px;
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  padding: 10px 0;
+  line-height: 1.5;
+  font-weight: 500;
+  z-index: 1;
+  -webkit-transform: translateY(308px);
+  -ms-transform: translateY(308px);
+  transform: translateY(308px);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
-.main-cruise__list {
-  display: -ms-grid;
-  display: grid;
-  position: absolute;
-  top: 0;
-  margin: 73px 35px 25px;
+.main-cruise__info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.4;
   opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  -o-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 0.3s, 1s;
+  -o-transition-duration: 0.3s, 1s;
+  transition-duration: 0.3s, 1s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
-.main-cruise__point {
+.main-cruise__key {
   font-weight: 500;
   margin: 0;
 }
 
-.main-cruise__description {
-  margin: 0 0 10px 0;
+.main-cruise__value {
   font-weight: 400;
   color: #d8d8d9;
+  padding: 0;
+  margin: 0 0 10px 0;
 }
 
-.main-cruise__button {
-  bottom: 0;
-  background-color: #f9fbfd;
-  border: none;
-  padding: 14px 53px;
-  text-align: center;
-  cursor: pointer;
-  color: #011c40;
+.main-cruise__cta {
+  margin-top: 18px;
   font-weight: 600;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.5;
+  padding: 9px;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: #011c40;
+  background-color: #f9fbfd;
+  -webkit-transition-property: opacity, color, background-color, -webkit-transform;
+  transition-property: opacity, color, background-color, -webkit-transform;
+  -o-transition-property: transform, opacity, color, background-color;
+  transition-property: transform, opacity, color, background-color;
+  transition-property: transform, opacity, color, background-color, -webkit-transform;
+  -webkit-transition-duration: 0.3s, 1s, 0.2s, 0.2s;
+  -o-transition-duration: 0.3s, 1s, 0.2s, 0.2s;
+  transition-duration: 0.3s, 1s, 0.2s, 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.main-cruise__cta:hover,
+.main-cruise__cta:focus-within {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 0.3em;
+}
+
+.main-cruise__info,
+.main-cruise__cta {
+  -webkit-transform: translateY(386px);
+  -ms-transform: translateY(386px);
+  transform: translateY(386px);
+  opacity: 0;
 }
 
 .main-ordering {
@@ -1128,7 +1211,6 @@ button,
 }
 
 .main-ordering__wrapper {
-  position: absolute;
   width: 1366px;
   margin: 0 auto;
   padding: 50px 163px;
@@ -1146,6 +1228,17 @@ button,
   align-items: center;
   -ms-flex-item-align: center;
   align-self: center;
+  z-index: 1;
+}
+
+.main-ordering__image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .main-ordering__block {

@@ -33,9 +33,17 @@
   :hover {
     cursor: pointer;
   }
-  
+
   :hover .main-cruise__image {
     opacity: 0;
+  }
+
+  :hover + .main-cruise__list {
+    opacity: 1;
+  }
+
+  :hover ~ .main-cruise__name {
+    top: 0;
   }
 }
 
@@ -43,16 +51,20 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  margin: 0 0 15px 0;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  padding: 10px 0;
 }
 
 .main-cruise__list {
   display: grid;
   position: absolute;
   top: 0;
-  padding: 35px 25px;
+  margin: 73px 35px 25px;
   font-size: 14px;
   line-height: 20px;
+  opacity: 0;
 }
 
 .main-cruise__point {

@@ -24,35 +24,40 @@
 
 .main-cruise__card {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 260px;
   color: $color-alice-blue;
   background-color: $color-tangaroa;
-}
 
-.main-cruise__card--reverse {
-  padding: 35px 25px;
+  :hover {
+    cursor: pointer;
+  }
+  
+  :hover .main-cruise__image {
+    opacity: 0;
+  }
 }
 
 .main-cruise__name {
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  margin: 0;
-}
-
-.main-cruise__name--closed {
-  position: absolute;
-  top: 88%;
-  left: 10%;
+  margin: 0 0 15px 0;
 }
 
 .main-cruise__list {
+  display: grid;
+  position: absolute;
+  top: 0;
+  padding: 35px 25px;
   font-size: 14px;
   line-height: 20px;
 }
 
 .main-cruise__point {
   font-weight: 500;
+  margin: 0;
 }
 
 .main-cruise__description {
@@ -62,10 +67,10 @@
 }
 
 .main-cruise__button {
-  padding: 14px 46px;
+  bottom: 0;
   background-color: $color-alice-blue;
   border: none;
-  width: 100%;
+  padding: 14px 53px;
   text-align: center;
   cursor: pointer;
   color: $color-tangaroa;

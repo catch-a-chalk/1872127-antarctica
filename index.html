@@ -80,7 +80,6 @@
         <div class="main-advantages__wrapper">
           <h2 class="main-advantages__title">Преимущества</h2>
           <ul class="main-advantages__container">
-            <!-- Вставить еще две карточки после утверждения формата -->
             <li class="main-advantages__card">
               <svg class="main-advantages__logo" width="27" height="32" aria-hidden="true" fill="#011C40">
                 <use href="img/sprite_auto.svg#icon-ship"></use>
@@ -139,8 +138,8 @@
                 <p class="main-cruise__value">11 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 11500 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -161,8 +160,8 @@
                 <p class="main-cruise__value">20 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 14500 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -183,8 +182,8 @@
                 <p class="main-cruise__value">15 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 14500 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -205,8 +204,8 @@
                 <p class="main-cruise__value">13 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 9700 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -227,8 +226,8 @@
                 <p class="main-cruise__value">21 день</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 18600 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -249,8 +248,8 @@
                 <p class="main-cruise__value">14 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 11700 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -271,8 +270,8 @@
                 <p class="main-cruise__value">17 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 12500 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -293,15 +292,14 @@
                 <p class="main-cruise__value">11 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 12300 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
           </div>
         </div>
       </section>
 
       <section class="main-ordering">
-        <h2 class="visually-hidden">Секция с бронированием</h2>
         <div class="main-ordering__wrapper">
           <div class="main-ordering__block">
             <h2 class="main-ordering__title">Раннее бронирование</h2>
@@ -347,9 +345,12 @@
           <div class="main-contacts__map">
             <!-- Черновой вариант карты для стилизации блока. Обязательно поменяю на интерактив -->
             <picture>
-              <source type="image/webp" media="(min-width: 1366px)" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x">
-              <source media="(min-width: 1366px)" srcset="img/map-desktop@1x.jpg, img/map-desktop@2x.jpg 2x">
-              <img src="img/ordering-bg-mobile@1x.jpg" srcset="img/ordering-bg-mobile@2x.jpg" alt="Фоновое изображение ландшафта">
+              <source type="image/webp" media="(max-width: 767px)"  srcset="img/map-mobile@1x.webp, img/map-mobile@2x.webp 2x">
+              <source type="image/jpg" media="(max-width: 767px)"  srcset="img/map-mobile@1x.jpg, img/map-mobile@2x.jpg 2x">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/map-tablet@1x.webp, img/map-tablet@2x.webp 2x">
+              <source type="image/jpg" media="(max-width: 1365px)" srcset="img/map-tablet@1x.jpg, img/map-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x">
+              <img class="main-contacts__image" src="img/map-desktop@1x.jpg" srcset="img/map-desktop@2x.jpg 2x" alt="Черновой вариант карты">
             </picture>
           </div>
           <div class="main-contacts__data">
@@ -469,9 +470,8 @@
         </div>
       </div>
     </div>
-
+ -->
     <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script> -->
-    <!-- <script src="script.js"></script> -->
+    <script src="js/main.min.js"></script>
   </body>
 </html>

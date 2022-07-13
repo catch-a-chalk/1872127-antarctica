@@ -24,69 +24,111 @@
 
 .main-cruise__card {
   position: relative;
-  display: flex;
-  justify-content: center;
-  width: 260px;
+  padding: 28px 25px 35px;
   color: $color-alice-blue;
-  background-color: $color-tangaroa;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, transparent 50%, $color-tangaroa 100%);
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  width: 260px;
+  min-height: 386px;
 
-  :hover {
-    cursor: pointer;
+  &:hover,
+  &:focus-within {
+    background-color: $color-tangaroa;
+    box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
   }
 
-  :hover .main-cruise__image {
-    opacity: 0;
+  &:hover .main-cruise__name,
+  &:focus-within .main-cruise__name {
+    transform: none;
   }
 
-  :hover + .main-cruise__list {
+  &:hover .main-cruise__info,
+  &:focus-within .main-cruise__info,
+  &:hover .main-cruise__cta,
+  &:focus-within .main-cruise__cta {
     opacity: 1;
+    transform: none;
   }
+}
 
-  :hover ~ .main-cruise__name {
-    top: 0;
-  }
+.main-cruise__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
 }
 
 .main-cruise__name {
-  font-weight: 500;
+  margin: 0 0 14px;
   font-size: 18px;
-  line-height: 27px;
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  padding: 10px 0;
+  line-height: 1.5;
+  font-weight: 500;
+  z-index: 1;
+  transform: translateY(308px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
-.main-cruise__list {
-  display: grid;
-  position: absolute;
-  top: 0;
-  margin: 73px 35px 25px;
+.main-cruise__info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.4;
   opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.3s, 1s;
+  transition-timing-function: ease-in-out;
+  // display: flex;
+  // flex-direction: column;
+  // flex-grow: 1;
+  // align-content: space-between;
 }
 
-.main-cruise__point {
+.main-cruise__key {
   font-weight: 500;
   margin: 0;
 }
 
-.main-cruise__description {
-  margin: 0 0 10px 0;
+.main-cruise__value {
   font-weight: 400;
   color: $color-quartz;
+  padding: 0;
+  margin: 0 0 10px 0;
 }
 
-.main-cruise__button {
-  bottom: 0;
-  background-color: $color-alice-blue;
-  border: none;
-  padding: 14px 53px;
-  text-align: center;
-  cursor: pointer;
-  color: $color-tangaroa;
+.main-cruise__cta {
+  margin-top: 18px;
   font-weight: 600;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.5;
+  padding: 9px;
+  min-height: 40px;
+  display: flex;
+  place-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: $color-tangaroa;
+  background-color: $color-alice-blue;
+  transition-property: transform, opacity, color, background-color;
+  transition-duration: 0.3s, 1s, 0.2s, 0.2s;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:focus-within {
+    outline: 2px solid $color-alice-blue;
+    outline-offset: 0.3em;
+  }
+}
+
+.main-cruise__info, .main-cruise__cta {
+  transform: translateY(386px);
+  opacity: 0;
 }

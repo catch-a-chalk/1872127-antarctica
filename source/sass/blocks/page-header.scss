@@ -12,4 +12,14 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+
+  @media (max-width: $vp-1365) { 
+    width: $vp-768;
+    padding: 35px 45px;
+  }
+
+  @media (max-width: $vp-767) { 
+    width: $vp-320;
+    padding: 20px 15px;
+  }
 }

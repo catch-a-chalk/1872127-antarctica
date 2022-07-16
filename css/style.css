@@ -567,6 +567,11 @@ button,
   appearance: none;
 }
 
+#map {
+  width: 560px;
+  height: 306px;
+}
+
 .wrapper {
   position: relative;
   display: -webkit-box;
@@ -786,6 +791,7 @@ button,
 .page__body {
   font-family: "Montserrat", "Open Sans", sans-serif;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 
 .page-header {
@@ -1332,7 +1338,7 @@ button,
 
 .main-ordering__container {
   width: 403px;
-  background-color: #101a56;
+  background-color: #011c40;
   padding: 50px;
 }
 
@@ -1371,6 +1377,34 @@ button,
   font-weight: 400;
   font-size: 10px;
   line-height: 13px;
+}
+
+.main-ordering__control {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-ordering__control-input[type='checkbox']:checked + .main-ordering__control-mark::before {
+  content: url("../img/svg/icon-check-on.svg");
+}
+
+.main-ordering__control-input[type='checkbox']:not(:checked) + .main-ordering__control-mark::before {
+  content: url("../img/svg/icon-check-off.svg");
+}
+
+.main-orderingr__control-mark {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+}
+
+.page-form-filter__control-mark--check {
+  margin-right: 5px;
 }
 
 .main-ordering__button {
@@ -1465,6 +1499,8 @@ button,
 }
 
 .page-footer__wrapper {
+  width: 1366px;
+  margin: 0 auto;
   padding: 50px 103px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1542,6 +1578,11 @@ button,
 }
 
 @media (max-width: 1365px) {
+  #map {
+    width: 324px;
+    height: 355px;
+  }
+
   .page-header__wrapper {
     width: 768px;
     padding: 35px 45px;
@@ -1675,6 +1716,7 @@ button,
   }
 
   .page-footer__wrapper {
+    width: 768px;
     padding: 50px 45px;
   }
 
@@ -1699,6 +1741,11 @@ button,
 }
 
 @media (max-width: 767px) {
+  #map {
+    width: 290px;
+    height: 316px;
+  }
+
   .container {
     padding: 0 16px;
   }
@@ -1736,8 +1783,8 @@ button,
     color: #011c40;
     background-color: #f9fbfd;
     padding: 75px 30px 30px 15px;
-    width: 285px;
-    min-height: 190px;
+    width: calc(100vw - 35px);
+    min-height: 100vh;
   }
 
   .page-nav__item {
@@ -1884,6 +1931,10 @@ button,
     padding: 40px 38px;
   }
 
+  .main-ordering__text {
+    text-align: center;
+  }
+
   .main-contacts__wrapper {
     width: 320px;
     padding: 65px 15px;
@@ -1907,6 +1958,7 @@ button,
   }
 
   .page-footer__wrapper {
+    width: 320px;
     padding: 40px 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -1,5 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import initNav from './modules/modals/init-nav';
+import initScroll from './modules/modals/init-scroll';
+import initMap from './modules/modals/init-map';
+
 
 // ---------------------------------
 
@@ -9,6 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initNav();
+  initScroll();
+  initMap();
 
   // Modules
   // ---------------------------------
@@ -18,21 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
   });
-});
-
-var navMain = document.querySelector('.page-nav');
-var navToggle = document.querySelector('.page-nav__toggle');
-
-navMain.classList.remove('page-nav--nojs');
-
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('page-nav--closed')) {
-    navMain.classList.remove('page-nav--closed');
-    navMain.classList.add('page-nav--opened');
-  } else {
-    navMain.classList.add('page-nav--closed');
-    navMain.classList.remove('page-nav--opened');
-  }
 });
 
 // ---------------------------------

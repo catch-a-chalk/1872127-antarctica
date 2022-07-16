@@ -28,8 +28,8 @@
     color: $color-tangaroa;
     background-color: $color-alice-blue;
     padding: 75px 30px 30px 15px;
-    width: 285px;
-    min-height: 190px;
+    width: calc(100vw - 35px);
+    min-height: 100vh;
   }
 }
 

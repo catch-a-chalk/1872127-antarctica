@@ -88,7 +88,7 @@
 
 .main-ordering__container {
   width: 403px;
-  background-color: $color-sapphire;
+  background-color: $color-tangaroa;
   padding: 50px;
 
   @media (max-width: $vp-767) {
@@ -103,6 +103,10 @@
   font-size: 18px;
   line-height: 27px;
   margin: 0;
+
+  @media (max-width: $vp-767) {
+    text-align: center;
+  }
 }
 
 .main-ordering__group {
@@ -125,6 +129,30 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 13px;
+}
+
+.main-ordering__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.main-ordering__control-input[type='checkbox']:checked + .main-ordering__control-mark::before {
+  content: url("../img/svg/icon-check-on.svg");
+}
+
+.main-ordering__control-input[type='checkbox']:not(:checked) + .main-ordering__control-mark::before {
+  content: url("../img/svg/icon-check-off.svg");
+}
+
+.main-orderingr__control-mark {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+}
+
+.page-form-filter__control-mark--check {
+  margin-right: 5px;
 }
 
 .main-ordering__button {

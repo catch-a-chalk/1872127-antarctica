@@ -1,5 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import initNav from './modules/modals/init-nav';
+import initScroll from './modules/modals/init-scroll';
+import initMap from './modules/modals/init-map';
+
 
 // ---------------------------------
 
@@ -9,6 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initNav();
+  initScroll();
+  initMap();
 
   // Modules
   // ---------------------------------

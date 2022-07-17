@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
     <title>Круизы в Антарктику</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6ed6e262-2251-4385-8fb7-1e1ae5a931d4&lang=ru_RU" type="text/javascript"></script>
     <link rel="preload" as="font" href="fonts/montserrat.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="fonts/montserratbold.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
@@ -24,23 +25,23 @@
         <!-- Можно добавить класс page-nav--closed -->
         <!-- Можно добавить класс page-nav--opened -->
         <!-- Можно добавить класс page-nav--nojs -->
-        <nav class="page-nav page-nav--closed page-nav--nojs">
+        <nav class="page-nav page-nav--closed page-nav--nojs" id="main-menu">
           <ul class="page-nav__list">
             <li class="page-nav__item">
-              <a class="page-nav__link" href="#">Преимущества</a>
+              <a class="page-nav__link" href="#inner1">Преимущества</a>
             </li>
             <li class="page-nav__item">
-              <a class="page-nav__link" href="#">Направления</a>
+              <a class="page-nav__link" href="#inner2">Направления</a>
             </li>
             <li class="page-nav__item">
-              <a class="page-nav__link" href="#">Ближайшие круизы</a>
+              <a class="page-nav__link" href="#inner3">Ближайшие круизы</a>
             </li>
             <li class="page-nav__item">
-              <a class="page-nav__link" href="#">Контакты</a>
+              <a class="page-nav__link" href="#inner4">Контакты</a>
             </li>
           </ul>
         </nav>
-        <button class="page-nav__toggle" type="button">
+        <button class="page-nav__toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-menu">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
@@ -76,11 +77,10 @@
         </div>
       </section>
 
-      <section class="main-advantages">
+      <section class="main-advantages" id="inner1">
         <div class="main-advantages__wrapper">
           <h2 class="main-advantages__title">Преимущества</h2>
           <ul class="main-advantages__container">
-            <!-- Вставить еще две карточки после утверждения формата -->
             <li class="main-advantages__card">
               <svg class="main-advantages__logo" width="27" height="32" aria-hidden="true" fill="#011C40">
                 <use href="img/sprite_auto.svg#icon-ship"></use>
@@ -116,7 +116,7 @@
         </picture>
       </section>
 
-      <section class="main-cruise">
+      <section class="main-cruise" id="inner3">
         <div class="main-cruise__wrapper">
           <h2 class="main-cruise__title">Ближайшие круизы</h2>
           <div class="main-cruise__container">
@@ -139,8 +139,8 @@
                 <p class="main-cruise__value">11 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 11500 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -161,8 +161,8 @@
                 <p class="main-cruise__value">20 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 14500 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -183,8 +183,8 @@
                 <p class="main-cruise__value">15 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 14500 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -205,8 +205,8 @@
                 <p class="main-cruise__value">13 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 9700 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -227,8 +227,8 @@
                 <p class="main-cruise__value">21 день</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 18600 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -249,8 +249,8 @@
                 <p class="main-cruise__value">14 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 11700 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -271,8 +271,8 @@
                 <p class="main-cruise__value">17 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 12500 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
             <div class="main-cruise__card">
               <picture>
@@ -293,15 +293,14 @@
                 <p class="main-cruise__value">11 дней</p>
                 <h3 class="main-cruise__key">Цена</h3>
                 <p class="main-cruise__value">от 12300 $</p>
-                <a class="main-cruise__cta" type="button">Забронировать</a>
               </div>
+              <a class="main-cruise__cta" type="button" href="#">Забронировать</a>
             </div>
           </div>
         </div>
       </section>
 
       <section class="main-ordering">
-        <h2 class="visually-hidden">Секция с бронированием</h2>
         <div class="main-ordering__wrapper">
           <div class="main-ordering__block">
             <h2 class="main-ordering__title">Раннее бронирование</h2>
@@ -314,19 +313,22 @@
             <form class="main-ordering__form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="main-ordering__group">
                 <label class="visually-hidden" for="form-name">Имя</label>
-                <input class="main-ordering__field" type="text" id="form-name" placeholder="Имя">
+                <input class="main-ordering__field" type="text" id="form-name" placeholder="Имя" autocomplete="name">
               </p>
               <p class="main-ordering__group">
                 <label class="visually-hidden" for="form-tel">Телефон</label>
-                <input class="main-ordering__field" type="tel" id="form-tel" placeholder="Телефон">
+                <input class="main-ordering__field" type="tel" id="form-tel" placeholder="Телефон" required autocomplete="tel">
               </p>
               <p class="main-ordering__group">
                 <label class="visually-hidden" for="form-email">Email</label>
-                <input class="main-ordering__field" type="email" id="form-email" placeholder="Email">
+                <input class="main-ordering__field" type="email" id="form-email" placeholder="Email"  autocomplete="email">
               </p>
               <div class="main-ordering__checkbox">
-                <label for="form-subscribe">Я согласен на обработку моих персональных данных</label>
-                <input class="main-ordering__subscribe" id="form-subscribe" checked="checked" type="checkbox" value="1">
+                <label class="main-ordering__control" for="form-subscribe">
+                  <input class="visually-hidden main-ordering__control-input" id="form-subscribe" checked="checked" type="checkbox" value="checked">
+                  <span class="main-ordering__control-mark page-form-filter__control-mark--check"></span>
+                  <span class="main-ordering__control-label">Я согласен на обработку моих персональных данных</span>
+                </label>
               </div>
               <button class="main-ordering__button" type="submit">Оставить заявку</button>
             </form>
@@ -342,16 +344,9 @@
         </picture>
       </section>
 
-      <address class="main-contacts">
+      <address class="main-contacts" id="inner4">
         <div class="main-contacts__wrapper">
-          <div class="main-contacts__map">
-            <!-- Черновой вариант карты для стилизации блока. Обязательно поменяю на интерактив -->
-            <picture>
-              <source type="image/webp" media="(min-width: 1366px)" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x">
-              <source media="(min-width: 1366px)" srcset="img/map-desktop@1x.jpg, img/map-desktop@2x.jpg 2x">
-              <img src="img/ordering-bg-mobile@1x.jpg" srcset="img/ordering-bg-mobile@2x.jpg" alt="Фоновое изображение ландшафта">
-            </picture>
-          </div>
+          <div class="main-contacts__map" id="map"></div>
           <div class="main-contacts__data">
             <p class="main-contacts__bold">У вас ещё остались вопросы или сомнения?
               Приезжайте к нам в офис и мы вам все расскажем.
@@ -385,16 +380,16 @@
         </a>
         <ul class="page-footer__list">
           <li class="page-footer__item">
-            <a class="page-footer__link" href="#">Преимущества</a>
+            <a class="page-footer__link" href="#inner1">Преимущества</a>
           </li>
           <li class="page-footer__item">
-            <a class="page-footer__link" href="#">Направления</a>
+            <a class="page-footer__link" href="#inner2">Направления</a>
           </li>
           <li class="page-footer__item">
-            <a class="page-footer__link" href="#">Ближайшие круизы</a>
+            <a class="page-footer__link" href="#inner3">Ближайшие круизы</a>
           </li>
           <li class="page-footer__item">
-            <a class="page-footer__link" href="#">Контакты</a>
+            <a class="page-footer__link" href="#inner4">Контакты</a>
           </li>
         </ul>
         <div class="page-footer__social">
@@ -469,9 +464,8 @@
         </div>
       </div>
     </div>
-
+ -->
     <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script> -->
-    <!-- <script src="script.js"></script> -->
+    <script src="js/main.min.js"></script>
   </body>
 </html>

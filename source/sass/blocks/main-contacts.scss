@@ -10,6 +10,25 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-column-gap: 100px;
+
+  @media (max-width: $vp-1365) {
+    width: $vp-768;
+    padding: 100px 45px;
+    grid-column-gap: 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: $vp-320;
+    padding: 65px 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 50%);
+  }
+}
+
+.main-contacts__map {
+  @media (max-width: $vp-767) {
+    order: 2;
+  }
 }
 
 .main-contacts__data {
@@ -23,6 +42,15 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (max-width: $vp-1365) {
+    width: 325px;
+  }
+
+  @media (max-width: $vp-767) {
+    order: 1;
+    width: 290px;
   }
 }
 
@@ -39,7 +67,12 @@
 }
 
 .main-contacts__item {
+  display: flex;
   margin-bottom: 33px;
+
+  a[href^="tel:"] {
+    color: $color-tangaroa;
+  }
 }
 
 .main-contacts__logo {

@@ -65,12 +65,12 @@
     font-size: 40px;
     line-height: 60px;
     margin: 0;
-  
-      @media (max-width: $vp-1365) {
+
+    @media (max-width: $vp-1365) {
       font-size: 34px;
       line-height: 51px;
     }
-  
+
     @media (max-width: $vp-767) {
       font-size: 24px;
       line-height: 31px;
@@ -137,11 +137,11 @@
   align-items: center;
 }
 
-.main-ordering__control-input[type='checkbox']:checked + .main-ordering__control-mark::before {
+.main-ordering__control-input[type="checkbox"]:checked + .main-ordering__control-mark::before {
   content: url("../img/svg/icon-check-on.svg");
 }
 
-.main-ordering__control-input[type='checkbox']:not(:checked) + .main-ordering__control-mark::before {
+.main-ordering__control-input[type="checkbox"]:not(:checked) + .main-ordering__control-mark::before {
   content: url("../img/svg/icon-check-off.svg");
 }
 

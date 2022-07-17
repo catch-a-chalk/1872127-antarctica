@@ -52,12 +52,13 @@
     order: 1;
     width: 290px;
   }
-}
 
-.main-contacts__bold {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  
 }
 
 .main-contacts__list {
@@ -73,13 +74,13 @@
   a[href^="tel:"] {
     color: $color-tangaroa;
   }
+
+  p {
+    margin: 0;
+  }
 }
 
 .main-contacts__logo {
   float: left;
   margin-right: 10px;
-}
-
-.main-contacts__text {
-  margin: 0;
 }

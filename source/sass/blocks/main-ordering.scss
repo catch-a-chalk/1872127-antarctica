@@ -6,6 +6,15 @@
   justify-content: center;
   background-color: $color-solitude;
 
+  img {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   @media (max-width: $vp-1365) {
     min-height: 805px;
   }
@@ -38,15 +47,6 @@
   }
 }
 
-.main-ordering__image {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .main-ordering__block {
   width: 495px;
 
@@ -59,31 +59,31 @@
     width: 260px;
     margin-bottom: 40px;
   }
-}
 
-.main-ordering__title {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 60px;
-  margin: 0;
-
-    @media (max-width: $vp-1365) {
-    font-size: 34px;
-    line-height: 51px;
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    margin: 0;
+  
+      @media (max-width: $vp-1365) {
+      font-size: 34px;
+      line-height: 51px;
+    }
+  
+    @media (max-width: $vp-767) {
+      font-size: 24px;
+      line-height: 31px;
+      margin-bottom: 25px;
+    }
   }
 
-  @media (max-width: $vp-767) {
-    font-size: 24px;
-    line-height: 31px;
-    margin-bottom: 25px;
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0;
   }
-}
-
-.main-ordering__description {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  margin: 0;
 }
 
 .main-ordering__container {
@@ -145,13 +145,12 @@
   content: url("../img/svg/icon-check-off.svg");
 }
 
-.main-orderingr__control-mark {
-  position: absolute;
+.main-ordering__control-mark {
   width: 18px;
   height: 18px;
 }
 
-.page-form-filter__control-mark--check {
+.main-ordering__control-mark-check {
   margin-right: 5px;
 }
 

@@ -6,6 +6,15 @@
   justify-content: center;
   background-color: $color-solitude;
 
+  img {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   @media (max-width: $vp-1365) {
     min-height: 588px;
   }
@@ -33,32 +42,23 @@
     width: $vp-320;
     grid-row-gap: 40px;
   }
-}
 
-.main-advantages__image {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.main-advantages__title {
-  text-align: center;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 42px;
-  margin: 0;
-
-  @media (max-width: $vp-1365) {
-    font-size: 26px;
-    line-height: 39px;
-  }
-
-  @media (max-width: $vp-767) {
-    font-size: 24px;
-    line-height: 36px;
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    margin: 0;
+  
+    @media (max-width: $vp-1365) {
+      font-size: 26px;
+      line-height: 39px;
+    }
+  
+    @media (max-width: $vp-767) {
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
 }
 
@@ -70,7 +70,7 @@
   justify-content: center;
   margin: 0 auto;
   padding: 0;
-  
+
   @media (max-width: $vp-1365) {
     grid-column-gap: 15px;
   }
@@ -100,30 +100,30 @@
   @media (max-width: $vp-767) {
     width: 290px;
   }
-}
 
-.main-advantages__header {
-  margin: 18px 0 20px 0;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  align-self: baseline;
-
-  @media (max-width: $vp-1365) {
-    line-height: 26px;
-    margin: 10px 0;
+  h3 {
+    margin: 18px 0 20px 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    align-self: baseline;
+  
+    @media (max-width: $vp-1365) {
+      line-height: 26px;
+      margin: 10px 0;
+    }
+  
+    @media (max-width: $vp-767) {
+      line-height: 25px;
+      margin: 19px 0;
+    }
   }
 
-  @media (max-width: $vp-767) {
-    line-height: 25px;
-    margin: 19px 0;
-  }
-}
-
-.main-advantages__description {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  margin: 0;
-  align-self: baseline;
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    align-self: baseline;
+  }  
 }

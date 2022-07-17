@@ -7,7 +7,7 @@
 
   @media (max-width: $vp-1365) {
     width: $vp-768;
-    padding: 100px 60px;
+    padding: 80px 60px;
   }
 
   @media (max-width: $vp-767) {
@@ -19,7 +19,8 @@
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
-    margin: 0 0 60px 0;
+    letter-spacing: 2px;
+    margin: 0 0 40px 0;
     color: $color-tangaroa;
     text-align: center;
 
@@ -112,6 +113,7 @@
     font-size: 18px;
     line-height: 1.5;
     font-weight: 500;
+    letter-spacing: 2px;
     z-index: 1;
     transform: translateY(308px);
     transition-property: transform;
@@ -144,12 +146,12 @@
     font-weight: 400;
     color: $color-quartz;
     padding: 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 13px 0;
   }
 }
 
 .main-cruise__cta {
-  margin-top: 18px;
+  margin-top: -6px;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.5;

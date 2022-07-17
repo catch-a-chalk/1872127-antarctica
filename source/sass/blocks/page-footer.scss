@@ -23,6 +23,15 @@
   }
 }
 
+.page-footer__logotype svg {
+  fill: $color-alice-blue;
+
+  @media (max-width: $vp-1365) {
+    width: 38px;
+    height: 20px;
+  }
+}
+
 .page-footer__list {
   margin: 0;
   padding: 0;
@@ -52,9 +61,11 @@
 
 .page-footer__item {
   margin: 0;
+  letter-spacing: 2px;
 
   &:not(:last-child) {
-    margin-right: 33px;
+    margin-right: 25px;
+    letter-spacing: 1px;
   }
 
   @media (max-width: $vp-1365) {
@@ -90,5 +101,9 @@
 .page-footer__ref {
   &:not(:first-child) {
     margin-left: 28px;
+
+    @media (max-width: $vp-1365) {
+      margin-left: 15px;
+    }
   }
 }

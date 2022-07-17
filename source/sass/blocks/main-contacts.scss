@@ -9,12 +9,12 @@
   padding: 120px 103px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-column-gap: 100px;
+  grid-column-gap: 80px;
 
   @media (max-width: $vp-1365) {
     width: $vp-768;
-    padding: 100px 45px;
-    grid-column-gap: 30px;
+    padding: 100px 45px 85px 45px;
+    grid-column-gap: 20px;
   }
 
   @media (max-width: $vp-767) {
@@ -54,9 +54,12 @@
   }
 
   p {
+    width: inherit;
+    margin-top: 35px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
+    word-spacing: 6px;
   }
 }
 
@@ -68,7 +71,7 @@
 
 .main-contacts__item {
   display: flex;
-  margin-bottom: 33px;
+  margin-bottom: 20px;
 
   a[href^="tel:"] {
     color: $color-tangaroa;
@@ -76,6 +79,7 @@
 
   p {
     margin: 0;
+    word-spacing: 0;
   }
 }
 

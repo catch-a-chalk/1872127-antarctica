@@ -30,7 +30,7 @@
   padding: 50px 163px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   align-self: center;
   z-index: 1;
@@ -38,7 +38,7 @@
   @media (max-width: $vp-1365) {
     width: $vp-768;
     flex-direction: column;
-    padding: 100px;
+    padding: 90px;
   }
 
   @media (max-width: $vp-767) {
@@ -64,6 +64,7 @@
     font-weight: 700;
     font-size: 40px;
     line-height: 60px;
+    letter-spacing: 2px;
     margin: 0;
 
     @media (max-width: $vp-1365) {
@@ -82,6 +83,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
+    letter-spacing: 1px;
     margin: 0;
   }
 }
@@ -101,6 +103,7 @@
   color: $color-alice-blue;
   font-weight: 500;
   font-size: 18px;
+  letter-spacing: 1px;
   line-height: 27px;
   margin: 0;
 
@@ -110,7 +113,7 @@
 }
 
 .main-ordering__group {
-  margin: 20px 0;
+  margin: 23px 0;
 }
 
 .main-ordering__field {
@@ -124,7 +127,7 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   color: $color-alice-blue;
   font-weight: 400;
   font-size: 10px;
@@ -155,7 +158,7 @@
 }
 
 .main-ordering__button {
-  padding: 15px;
+  padding: 12px 15px;
   background-color: $color-alice-blue;
   border: none;
   width: 100%;

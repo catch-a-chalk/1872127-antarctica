@@ -28,7 +28,7 @@
   width: $vp-1366;
   margin: 0 auto;
   display: grid;
-  grid-row-gap: 60px;
+  grid-row-gap: 40px;
   justify-content: center;
   align-items: center;
   align-self: center;
@@ -48,6 +48,7 @@
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
+    letter-spacing: 2px;
     margin: 0;
 
     @media (max-width: $vp-1365) {
@@ -91,10 +92,12 @@
   display: grid;
   grid-template-rows: 36px auto auto;
   align-items: center;
+  letter-spacing: 1px;
 
   @media (max-width: $vp-1365) {
     width: 206px;
-    padding: 25px 20px;
+    padding: 20px;
+    letter-spacing: 0;
   }
 
   @media (max-width: $vp-767) {
@@ -102,7 +105,7 @@
   }
 
   h3 {
-    margin: 18px 0 20px 0;
+    margin: 18px 0 0 0;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;

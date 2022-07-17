@@ -1150,6 +1150,30 @@ button,
   z-index: -1;
 }
 
+.main-cruise__card:hover,
+.main-cruise__card:focus-within {
+  background-color: #011c40;
+  -webkit-box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+}
+
+.main-cruise__card:hover h3,
+.main-cruise__card:focus-within h3 {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.main-cruise__card:hover .main-cruise__info,
+.main-cruise__card:focus-within .main-cruise__info,
+.main-cruise__card:hover .main-cruise__cta,
+.main-cruise__card:focus-within .main-cruise__cta {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .main-cruise__card h3 {
   margin: 0 0 14px;
   font-size: 18px;
@@ -1170,30 +1194,6 @@ button,
   -webkit-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-}
-
-.main-cruise__card:hover,
-.main-cruise__card:focus-within {
-  background-color: #011c40;
-  -webkit-box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
-  box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
-}
-
-.main-cruise__card:hover .main-cruise__name,
-.main-cruise__card:focus-within .main-cruise__name {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.main-cruise__card:hover .main-cruise__info,
-.main-cruise__card:focus-within .main-cruise__info,
-.main-cruise__card:hover .main-cruise__cta,
-.main-cruise__card:focus-within .main-cruise__cta {
-  opacity: 1;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
 }
 
 .main-cruise__info {
@@ -1397,11 +1397,11 @@ button,
   align-items: center;
 }
 
-.main-ordering__control-input[type='checkbox']:checked + .main-ordering__control-mark::before {
+.main-ordering__control-input[type="checkbox"]:checked + .main-ordering__control-mark::before {
   content: url("../img/svg/icon-check-on.svg");
 }
 
-.main-ordering__control-input[type='checkbox']:not(:checked) + .main-ordering__control-mark::before {
+.main-ordering__control-input[type="checkbox"]:not(:checked) + .main-ordering__control-mark::before {
   content: url("../img/svg/icon-check-off.svg");
 }
 

@@ -112,8 +112,24 @@
   }
 }
 
-.page-header__nav--opened ~ .page-header__logotype .page-header__logo {
-  fill: $color-tangaroa;
+.page-header__nav--opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.page-header__logotype--inside {
+  svg {
+    position: fixed;
+    fill: $color-tangaroa;
+    z-index: 11;
+    left: 60px;
+  }
 }
 
 .page-header__nav--opened + .page-header__toggle {

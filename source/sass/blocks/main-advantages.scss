@@ -20,7 +20,7 @@
   }
 
   @media (max-width: $vp-767) {
-    min-height: 997px;
+    min-height: 920px;
   }
 }
 
@@ -40,7 +40,8 @@
 
   @media (max-width: $vp-767) {
     width: $vp-320;
-    grid-row-gap: 40px;
+    grid-row-gap: 30px;
+    padding: 65px 15px;
   }
 
   h2 {
@@ -80,7 +81,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 33%);
     grid-column-gap: none;
-    grid-row-gap: 15px;
+    grid-row-gap: 30px;
   }
 }
 
@@ -102,6 +103,7 @@
 
   @media (max-width: $vp-767) {
     width: 290px;
+    padding: 8px 20px 15px 20px;
   }
 
   h3 {
@@ -119,6 +121,7 @@
     @media (max-width: $vp-767) {
       line-height: 25px;
       margin: 19px 0;
+      width: 185px;
     }
   }
 
@@ -128,5 +131,9 @@
     line-height: 20px;
     margin: 0;
     align-self: baseline;
+
+    @media (max-width: $vp-767) {
+      width: 230px;
+    }
   }
 }

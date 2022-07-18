@@ -57,7 +57,7 @@
 
   @media (max-width: $vp-767) {
     width: 260px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   h2 {
@@ -75,7 +75,7 @@
     @media (max-width: $vp-767) {
       font-size: 24px;
       line-height: 31px;
-      margin-bottom: 25px;
+      margin-bottom: 5px;
     }
   }
 
@@ -85,6 +85,10 @@
     line-height: 27px;
     letter-spacing: 1px;
     margin: 0;
+
+    @media (max-width: $vp-767) {
+      letter-spacing: 0;
+    }
   }
 }
 
@@ -95,32 +99,34 @@
 
   @media (max-width: $vp-767) {
     width: 290px;
-    padding: 40px 38px;
+    padding: 40px 30px;
+  }
+
+  h3 {
+    color: $color-alice-blue;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    margin: 0;
+
+    @media (max-width: $vp-767) {
+      text-align: center;
+    }
   }
 }
 
-.main-ordering__text {
-  color: $color-alice-blue;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 27px;
-  margin: 0;
-
-  @media (max-width: $vp-767) {
-    text-align: center;
+.main-ordering__form {
+  p {
+    margin: 23px 0;
   }
-}
 
-.main-ordering__group {
-  margin: 23px 0;
-}
-
-.main-ordering__field {
-  width: 100%;
-  padding: 11px 16px;
-  border: none;
-  color: rgba(1, 28, 64, 0.7);
+  input {
+    width: 100%;
+    padding: 11px 16px;
+    border: none;
+    color: rgba(1, 28, 64, 0.7);
+  }
 }
 
 .main-ordering__checkbox {
@@ -132,29 +138,30 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 13px;
-}
 
-.main-ordering__control {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
+  label {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 
-.main-ordering__control-input[type="checkbox"]:checked + .main-ordering__control-mark::before {
-  content: url("../img/svg/icon-check-on.svg");
-}
+  input[type="checkbox"]:checked + span::before {
+    content: url("../img/svg/icon-check-on.svg");
+  }
 
-.main-ordering__control-input[type="checkbox"]:not(:checked) + .main-ordering__control-mark::before {
-  content: url("../img/svg/icon-check-off.svg");
-}
+  input[type="checkbox"]:not(:checked) + span::before {
+    content: url("../img/svg/icon-check-off.svg");
+  }
 
-.main-ordering__control-mark {
-  width: 18px;
-  height: 18px;
-}
+  span {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
 
-.main-ordering__control-mark-check {
-  margin-right: 5px;
+  small {
+    font-size: 10px;
+  }
 }
 
 .main-ordering__button {

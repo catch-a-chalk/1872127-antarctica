@@ -12,7 +12,7 @@
 
   @media (max-width: $vp-767) {
     width: $vp-320;
-    padding: 65px 30px;
+    padding: 45px 30px 65px 30px;
   }
 
   h2 {
@@ -32,6 +32,7 @@
     @media (max-width: $vp-767) {
       font-size: 24px;
       line-height: 36px;
+      letter-spacing: 0;
       margin: 0 0 40px 0;
     }
   }
@@ -51,6 +52,7 @@
   @media (max-width: $vp-767) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    justify-content: center;
   }
 }
 
@@ -82,7 +84,7 @@
   &:hover,
   &:focus-within {
     background-color: $color-tangaroa;
-    box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+    box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   }
 
   &:hover h3,
@@ -104,7 +106,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 35px 25px;
+    padding: 25px 25px;
     width: 270px;
   }
 

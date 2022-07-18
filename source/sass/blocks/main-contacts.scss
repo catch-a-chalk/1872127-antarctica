@@ -19,7 +19,7 @@
 
   @media (max-width: $vp-767) {
     width: $vp-320;
-    padding: 65px 15px;
+    padding: 40px 15px 65px 15px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 50%);
   }
@@ -60,6 +60,10 @@
     font-size: 18px;
     line-height: 27px;
     word-spacing: 6px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 0;
   }
 }
 

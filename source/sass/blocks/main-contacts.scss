@@ -26,7 +26,17 @@
 }
 
 .main-contacts__map {
+  width: 560px;
+  height: 306px;
+
+  @media (max-width: $vp-1365) {
+    width: 324px;
+    height: 355px;
+  }
+
   @media (max-width: $vp-767) {
+    width: 290px;
+    height: 316px;
     order: 2;
   }
 }

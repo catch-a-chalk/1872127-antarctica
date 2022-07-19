@@ -852,8 +852,24 @@ button,
   display: none;
 }
 
-.page-header__nav--opened ~ .page-header__logotype .page-header__logo {
+.page-header__nav--opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.page-header__logotype--inside svg {
+  position: fixed;
   fill: #011c40;
+  z-index: 11;
+  left: 60px;
 }
 
 .page-header__nav--opened + .page-header__toggle::before,
@@ -969,7 +985,7 @@ button,
 }
 
 .main-description__block h2 {
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 24px;
   font-weight: 600;
   font-size: 28px;
@@ -1163,8 +1179,8 @@ button,
 .main-cruise__card:hover,
 .main-cruise__card:focus-within {
   background-color: #011c40;
-  -webkit-box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
-  box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+  -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 }
 
 .main-cruise__card:hover h3,
@@ -1364,7 +1380,7 @@ button,
   padding: 50px;
 }
 
-.main-ordering__text {
+.main-ordering__container h3 {
   color: #f9fbfd;
   font-weight: 500;
   font-size: 18px;
@@ -1373,11 +1389,11 @@ button,
   margin: 0;
 }
 
-.main-ordering__group {
+.main-ordering__form p {
   margin: 23px 0;
 }
 
-.main-ordering__field {
+.main-ordering__form input {
   width: 100%;
   padding: 11px 16px;
   border: none;
@@ -1402,7 +1418,7 @@ button,
   line-height: 13px;
 }
 
-.main-ordering__control {
+.main-ordering__checkbox label {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1412,21 +1428,22 @@ button,
   align-items: center;
 }
 
-.main-ordering__control-input[type="checkbox"]:checked + .main-ordering__control-mark::before {
+.main-ordering__checkbox input[type="checkbox"]:checked + span::before {
   content: url("../img/svg/icon-check-on.svg");
 }
 
-.main-ordering__control-input[type="checkbox"]:not(:checked) + .main-ordering__control-mark::before {
+.main-ordering__checkbox input[type="checkbox"]:not(:checked) + span::before {
   content: url("../img/svg/icon-check-off.svg");
 }
 
-.main-ordering__control-mark {
+.main-ordering__checkbox span {
   width: 18px;
   height: 18px;
+  margin-right: 5px;
 }
 
-.main-ordering__control-mark-check {
-  margin-right: 5px;
+.main-ordering__checkbox small {
+  font-size: 10px;
 }
 
 .main-ordering__button {
@@ -1872,16 +1889,16 @@ button,
   .main-intro {
     --bg: var(--mob-bg);
     min-height: 500px;
-    padding: 185px calc((100vw - 320px) / 2 + 15px) 0;
+    padding: 177px calc((100vw - 320px) / 2 + 15px) 0;
   }
 
   .main-intro__wrapper h1 {
-    margin: 0 0 5px 0;
     font-size: 36px;
     line-height: 45px;
   }
 
   .main-intro__wrapper p {
+    width: 200px;
     font-size: 16px;
   }
 
@@ -1909,12 +1926,13 @@ button,
   }
 
   .main-advantages {
-    min-height: 997px;
+    min-height: 920px;
   }
 
   .main-advantages__wrapper {
     width: 320px;
-    grid-row-gap: 40px;
+    grid-row-gap: 30px;
+    padding: 65px 15px;
   }
 
   .main-advantages__wrapper h2 {
@@ -1928,26 +1946,33 @@ button,
     -ms-grid-rows: (33%)[3];
     grid-template-rows: repeat(3, 33%);
     grid-column-gap: none;
-    grid-row-gap: 15px;
+    grid-row-gap: 30px;
   }
 
   .main-advantages__card {
     width: 290px;
+    padding: 8px 20px 15px 20px;
   }
 
   .main-advantages__card h3 {
     line-height: 25px;
     margin: 19px 0;
+    width: 185px;
+  }
+
+  .main-advantages__card p {
+    width: 230px;
   }
 
   .main-cruise__wrapper {
     width: 320px;
-    padding: 65px 30px;
+    padding: 45px 30px 65px 30px;
   }
 
   .main-cruise__wrapper h2 {
     font-size: 24px;
     line-height: 36px;
+    letter-spacing: 0;
     margin: 0 0 40px 0;
   }
 
@@ -1956,10 +1981,13 @@ button,
     grid-template-columns: repeat(1, 1fr);
     -ms-grid-rows: (1fr)[8];
     grid-template-rows: repeat(8, 1fr);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .main-cruise__card {
-    padding: 35px 25px;
+    padding: 25px 25px;
     width: 270px;
   }
 
@@ -1974,27 +2002,31 @@ button,
 
   .main-ordering__block {
     width: 260px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .main-ordering__block h2 {
     font-size: 24px;
     line-height: 31px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+  }
+
+  .main-ordering__block p {
+    letter-spacing: 0;
   }
 
   .main-ordering__container {
     width: 290px;
-    padding: 40px 38px;
+    padding: 40px 30px;
   }
 
-  .main-ordering__text {
+  .main-ordering__container h3 {
     text-align: center;
   }
 
   .main-contacts__wrapper {
     width: 320px;
-    padding: 65px 15px;
+    padding: 40px 15px 65px 15px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: (50%)[2];
@@ -2014,6 +2046,10 @@ button,
     width: 290px;
   }
 
+  .main-contacts__data {
+    margin-top: 0;
+  }
+
   .page-footer__wrapper {
     width: 320px;
     padding: 40px 15px;
@@ -2031,7 +2067,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin: 30px 0;
+    margin: 15px 0;
   }
 
   .page-footer__logotype {

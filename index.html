@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
     <title>Круизы в Антарктику</title>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=6ed6e262-2251-4385-8fb7-1e1ae5a931d4&lang=ru_RU" type="text/javascript"></script>
     <link rel="preload" as="font" href="fonts/montserrat.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="fonts/montserratbold.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="fonts/montserrat.woff" type="font/woff2" crossorigin="anonymous">
@@ -17,7 +16,7 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logotype">
+        <a class="page-header__logotype page-header__logotype--inside">
           <svg width="70" height="38" role="img" aria-labelledby="logo-header">
             <title id="logo-header">Логотип</title>
             <use href="img/sprite_auto.svg#logo-hills"></use>
@@ -315,30 +314,32 @@
         <div class="main-ordering__wrapper">
           <div class="main-ordering__block">
             <h2>Раннее бронирование</h2>
-            <p>Забронируйте тур за 3-6 месяцев<br>
+            <p>Забронируйте тур за 3-6 месяцев
               до даты выезда и сэкономьте до 50%
             </p>
           </div>
           <div class="main-ordering__container">
-            <p class="main-ordering__text">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-            <form class="main-ordering__form" action="https://echo.htmlacademy.ru/" method="post">
-              <p class="main-ordering__group">
-                <label class="visually-hidden" for="form-name">Имя</label>
-                <input class="main-ordering__field" type="text" id="form-name" placeholder="Имя" autocomplete="name">
-              </p>
-              <p class="main-ordering__group">
-                <label class="visually-hidden" for="form-tel">Телефон</label>
-                <input class="main-ordering__field" type="tel" id="form-tel" placeholder="Телефон" required autocomplete="tel">
-              </p>
-              <p class="main-ordering__group">
-                <label class="visually-hidden" for="form-email">Email</label>
-                <input class="main-ordering__field" type="email" id="form-email" placeholder="Email"  autocomplete="email">
-              </p>
+            <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <div class="main-ordering__form">
+                <p>
+                  <label class="visually-hidden" for="form-name">Имя</label>
+                  <input type="text" id="form-name" placeholder="Имя" autocomplete="name">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="form-tel">Телефон</label>
+                  <input type="tel" id="form-tel" placeholder="Телефон" required autocomplete="tel">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="form-email">Email</label>
+                  <input type="email" id="form-email" placeholder="Email"  autocomplete="email">
+                </p>
+              </div>
               <div class="main-ordering__checkbox">
-                <label class="main-ordering__control" for="form-subscribe">
-                  <input class="visually-hidden main-ordering__control-input" id="form-subscribe" checked="checked" type="checkbox" value="checked">
-                  <span class="main-ordering__control-mark main-ordering__control-mark-check"></span>
-                  <span class="main-ordering__control-label">Я согласен на обработку моих персональных данных</span>
+                <label for="form-subscribe">
+                  <input class="visually-hidden" id="form-subscribe" checked="checked" type="checkbox" value="checked">
+                  <span></span>
+                  <small>Я согласен на обработку моих персональных данных</small>
                 </label>
               </div>
               <button class="main-ordering__button" type="submit">Оставить заявку</button>
@@ -477,6 +478,7 @@
       </div>
     </div>
  -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6ed6e262-2251-4385-8fb7-1e1ae5a931d4&lang=ru_RU" type="text/javascript"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

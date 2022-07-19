@@ -1,17 +1,31 @@
-export default function initNav() {
-  const navMain = document.querySelector('.page-nav');
-  const navToggle = document.querySelector('.page-nav__toggle');
+const navMain = document.querySelector('.page-header__nav');
+const navToggle = document.querySelector('.page-header__toggle');
+const navLogo = document.querySelector('.page-header__logotype');
 
-  navMain.classList.remove('page-nav--nojs');
+export default function initNav() {
+  navMain.classList.remove('page-header__nav--nojs');
+  navLogo.classList.remove('page-header__logotype--inside');
 
   navToggle.addEventListener('click', () => {
     // стоит ли открывать
     const shouldBeOpened = navToggle.ariaExpanded === 'false';
-    navMain.classList.toggle('page-nav--closed', !shouldBeOpened);
-    navMain.classList.toggle('page-nav--opened', shouldBeOpened);
-    // не позволяет скроллить
-    document.body.style.overflow = shouldBeOpened ? 'hidden' : '';
-    navToggle.ariaExpanded = String(shouldBeOpened);
-    navToggle.areaLabel = `${shouldBeOpened ? 'Открыть' : 'Закрыть'} меню`;
+    toggleNav(shouldBeOpened);
   });
+}
+
+export function toggleNav(willBeOpened) {
+  if (navMain.classList.toggle('page-header__nav--closed', !willBeOpened)) {
+    // удаляет класс логотипу и ставит на место
+    navLogo.classList.remove('page-header__logotype--inside');
+  }
+
+  if (navMain.classList.toggle('page-header__nav--opened', willBeOpened)) {
+    // добавляет класс логотипу и ставит его внутрь меню
+    navLogo.classList.add('page-header__logotype--inside');
+  }
+
+  // не позволяет скроллить
+  document.body.style.overflow = willBeOpened ? 'hidden' : '';
+  navToggle.ariaExpanded = String(willBeOpened);
+  navToggle.areaLabel = `${willBeOpened ? 'Открыть' : 'Закрыть'} меню`;
 }

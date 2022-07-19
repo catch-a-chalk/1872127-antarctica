@@ -1,6 +1,6 @@
 .main-intro {
   min-height: 650px;
-  padding: 283px calc((100vw - 1366px) / 2 + 95px) 0;
+  padding: 272px calc((100vw - 1366px) / 2 + 95px) 0;
   background: {
     color: $color-tangaroa;
     repeat: no-repeat;
@@ -17,13 +17,13 @@
   @media (max-width: $vp-1365) {
     --bg: var(--tab-bg);
     min-height: 638px;
-    padding: 280px calc((100vw - 768px) / 2 + 50px) 0;
+    padding: 270px calc((100vw - 768px) / 2 + 50px) 0;
   }
 
   @media (max-width: $vp-767) {
     --bg: var(--mob-bg);
     min-height: 500px;
-    padding: 185px calc((100vw - 320px) / 2 + 15px) 0;
+    padding: 177px calc((100vw - 320px) / 2 + 15px) 0;
   }
 }
 
@@ -35,37 +35,43 @@
   @media (max-width: $vp-1365) {
     margin: 0 auto;
   }
-}
 
-.main-intro__title {
-  margin: 0 0 30px 0;
-  font-weight: 700;
-  font-size: 54px;
-  line-height: 66px;
+  h1 {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+    letter-spacing: 4px;
 
-  @media (max-width: $vp-1365) {
-    font-size: 50px;
-    line-height: 61px;
+    @media (max-width: $vp-1365) {
+      font-size: 50px;
+      line-height: 61px;
+      letter-spacing: 3px;
+    }
+
+    @media (max-width: $vp-767) {
+      font-size: 36px;
+      line-height: 45px;
+    }
   }
 
-  @media (max-width: $vp-767) {
-    font-size: 36px;
-    line-height: 45px;
-  }
-}
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
 
-.main-intro__description {
-  margin: 0;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+    @media (max-width: $vp-1365) {
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1px;
+      word-spacing: 4px;
+    }
 
-  @media (max-width: $vp-1365) {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  @media (max-width: $vp-767) {
-    font-size: 16px;
+    @media (max-width: $vp-767) {
+      width: 200px;
+      font-size: 16px;
+    }
   }
 }

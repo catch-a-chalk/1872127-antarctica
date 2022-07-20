@@ -1,6 +1,6 @@
 export default function initMap() {
-  const ymaps = window.ymap;
-  if (ymaps) {
+  // const ymaps = window.ymap;
+  // if (ymaps) {
     ymaps.ready(function () {
       const myMap = new ymaps.Map('map',
           {center: [59.938635, 30.323118], zoom: 17},
@@ -26,5 +26,5 @@ export default function initMap() {
 
       myMap.geoObjects.add(myPlacemark);
     });
-  }
+  // }
 }

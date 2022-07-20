@@ -27,7 +27,7 @@
 .main-ordering__wrapper {
   width: $vp-1366;
   margin: 0 auto;
-  padding: 50px 163px;
+  padding: 48px 163px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -43,7 +43,7 @@
 
   @media (max-width: $vp-767) {
     width: $vp-320;
-    padding: 65px 15px;
+    padding: 65px 15px 55px;
   }
 }
 
@@ -52,7 +52,7 @@
 
   @media (max-width: $vp-1365) {
     text-align: center;
-    margin-bottom: 60px;
+    margin: 0 auto 60px;
   }
 
   @media (max-width: $vp-767) {
@@ -61,6 +61,8 @@
   }
 
   h2 {
+    position: relative;
+    bottom: 10px;
     font-weight: 700;
     font-size: 40px;
     line-height: 60px;
@@ -80,14 +82,16 @@
   }
 
   p {
+    width: 345px;
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 1px;
-    margin: 0;
+    margin: 0 auto;
 
     @media (max-width: $vp-767) {
       letter-spacing: 0;
+      width: inherit;
     }
   }
 }
@@ -103,6 +107,8 @@
   }
 
   h3 {
+    position: relative;
+    bottom: 10px;
     color: $color-alice-blue;
     font-weight: 500;
     font-size: 18px;

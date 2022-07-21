@@ -28,6 +28,7 @@
 .main-contacts__map {
   width: 560px;
   height: 306px;
+  align-self: center;
 
   @media (max-width: $vp-1365) {
     width: 324px;

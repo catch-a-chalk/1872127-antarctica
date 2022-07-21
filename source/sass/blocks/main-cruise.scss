@@ -170,6 +170,7 @@
   transition-property: transform, opacity, color, background-color;
   transition-duration: 0.3s, 1s, 0.2s, 0.2s;
   transition-timing-function: ease-in-out;
+  user-select: none;
 
   &:hover,
   &:focus-within {

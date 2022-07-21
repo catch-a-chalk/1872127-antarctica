@@ -796,6 +796,8 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .page-header__item {
@@ -808,6 +810,12 @@ button,
   font-size: 16px;
   line-height: 19.5px;
   color: #f9fbfd;
+}
+
+.page-header__link:hover,
+.page-header__link:focus-within {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 0.3em;
 }
 
 .page-header__toggle {
@@ -884,7 +892,7 @@ button,
 
 .main-intro {
   min-height: 650px;
-  padding: 266px calc((100vw - 1366px) / 2 + 95px) 0;
+  padding: 266px calc((100vw - 1366px) / 2 + 95px) 60px;
   background-color: #011c40;
   background-repeat: no-repeat;
   background-size: cover;
@@ -936,7 +944,11 @@ button,
 }
 
 .main-description__wrapper picture {
-  justify-self: flex-end;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .main-description__block {
@@ -1011,6 +1023,7 @@ button,
   line-height: 42px;
   letter-spacing: 2px;
   margin: 0;
+  padding-top: 120px;
   position: relative;
   bottom: 10px;
 }
@@ -1022,12 +1035,12 @@ button,
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 40px;
+  grid-gap: 40px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 120px 0;
 }
 
 .main-advantages__card {
@@ -1257,6 +1270,10 @@ button,
   -webkit-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main-cruise__cta:hover,
@@ -1324,7 +1341,7 @@ button,
 
 .main-ordering__block h2 {
   position: relative;
-  bottom: 10px;
+  top: 10px;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -1333,12 +1350,11 @@ button,
 }
 
 .main-ordering__block p {
-  width: 345px;
+  width: 390px;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 1px;
-  margin: 0 auto;
 }
 
 .main-ordering__container {
@@ -1367,6 +1383,12 @@ button,
   padding: 11px 16px;
   border: none;
   color: rgba(1, 28, 64, 0.7);
+}
+
+.main-ordering__form input:hover,
+.main-ordering__form input:focus-within {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 0.3em;
 }
 
 .main-ordering__checkbox {
@@ -1428,6 +1450,12 @@ button,
   line-height: 21px;
 }
 
+.main-ordering__button:hover,
+.main-ordering__button:focus-within {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 0.3em;
+}
+
 .main-contacts {
   color: #011c40;
   font-style: normal;
@@ -1447,6 +1475,9 @@ button,
 .main-contacts__map {
   width: 560px;
   height: 306px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .main-contacts__data {
@@ -1568,12 +1599,28 @@ button,
   color: #f9fbfd;
 }
 
+.page-footer__link:hover,
+.page-footer__link:focus-within {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 0.3em;
+}
+
 .page-footer__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.page-footer__ref:hover svg,
+.page-footer__ref:focus-within svg {
+  fill: #d8d8d9;
+}
+
+.page-footer__ref:focus {
+  outline: 2px solid #f9fbfd;
+  outline-offset: 0.3em;
 }
 
 .page-footer__ref:not(:first-child) {
@@ -1625,7 +1672,7 @@ button,
   .main-intro {
     --bg: var(--tab-bg);
     min-height: 638px;
-    padding: 270px calc((100vw - 768px) / 2 + 50px) 0;
+    padding: 270px calc((100vw - 768px) / 2 + 50px) 50px;
   }
 
   .main-intro__wrapper {
@@ -1682,7 +1729,7 @@ button,
   }
 
   .main-advantages__container {
-    grid-column-gap: 30px;
+    grid-gap: 30px;
   }
 
   .main-advantages__card {
@@ -1740,6 +1787,11 @@ button,
   .main-ordering__block h2 {
     font-size: 34px;
     line-height: 51px;
+    top: 0;
+  }
+
+  .main-ordering__block p {
+    margin: 0 auto;
   }
 
   .main-contacts__wrapper {
@@ -1874,7 +1926,7 @@ button,
   .main-intro {
     --bg: var(--mob-bg);
     min-height: 500px;
-    padding: 177px calc((100vw - 320px) / 2 + 15px) 0;
+    padding: 177px calc((100vw - 320px) / 2 + 15px) 30px;
   }
 
   .main-intro__wrapper h1 {

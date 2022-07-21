@@ -385,18 +385,10 @@ template {
 }
 
 @font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "";
-  font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
-}
-
-@font-face {
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 700;
-  src: url("source/fonts/montserratbold.woff") format("woff");
+  font-weight: 400;
+  src: url("../fonts/montserrat.woff2") format("woff2"), url("../fonts/montserrat.woff") format("woff");
   font-display: swap;
 }
 
@@ -404,23 +396,7 @@ template {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: url("source/fonts/montserratbold.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url("source/fonts/montserrat.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url("source/fonts/montserrat.woff2") format("woff2");
+  src: url("../fonts/montserratbold.woff2") format("woff2"), url("../fonts/montserratbold.woff") format("woff");
   font-display: swap;
 }
 
@@ -443,7 +419,6 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -565,11 +540,6 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-#map {
-  width: 560px;
-  height: 306px;
 }
 
 .wrapper {
@@ -922,7 +892,7 @@ button,
 
 .main-intro {
   min-height: 650px;
-  padding: 272px calc((100vw - 1366px) / 2 + 95px) 0;
+  padding: 266px calc((100vw - 1366px) / 2 + 95px) 0;
   background-color: #011c40;
   background-repeat: no-repeat;
   background-size: cover;
@@ -941,7 +911,7 @@ button,
 }
 
 .main-intro__wrapper h1 {
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
@@ -1049,16 +1019,18 @@ button,
   line-height: 42px;
   letter-spacing: 2px;
   margin: 0;
+  position: relative;
+  bottom: 10px;
 }
 
 .main-advantages__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (33%)[3];
-  grid-template-columns: repeat(3, 33%);
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 20px;
+  grid-column-gap: 40px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1103,7 +1075,7 @@ button,
 .main-cruise__wrapper {
   width: 1366px;
   margin: 0 auto;
-  padding: 120px 118px;
+  padding: 110px 118px 120px 118px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1118,7 +1090,7 @@ button,
   font-size: 28px;
   line-height: 42px;
   letter-spacing: 2px;
-  margin: 0 0 40px 0;
+  margin: 0 0 50px 0;
   color: #011c40;
   text-align: center;
 }
@@ -1335,7 +1307,7 @@ button,
 .main-ordering__wrapper {
   width: 1366px;
   margin: 0 auto;
-  padding: 50px 163px;
+  padding: 48px 163px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1359,6 +1331,8 @@ button,
 }
 
 .main-ordering__block h2 {
+  position: relative;
+  bottom: 10px;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -1367,11 +1341,12 @@ button,
 }
 
 .main-ordering__block p {
+  width: 345px;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 1px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .main-ordering__container {
@@ -1381,6 +1356,8 @@ button,
 }
 
 .main-ordering__container h3 {
+  position: relative;
+  bottom: 10px;
   color: #f9fbfd;
   font-weight: 500;
   font-size: 18px;
@@ -1473,6 +1450,11 @@ button,
   -ms-grid-columns: (50%)[2];
   grid-template-columns: repeat(2, 50%);
   grid-column-gap: 80px;
+}
+
+.main-contacts__map {
+  width: 560px;
+  height: 306px;
 }
 
 .main-contacts__data {
@@ -1583,7 +1565,7 @@ button,
 }
 
 .page-footer__item:not(:last-child) {
-  margin-right: 25px;
+  margin-right: 45px;
   letter-spacing: 1px;
 }
 
@@ -1627,11 +1609,6 @@ button,
 }
 
 @media (max-width: 1365px) {
-  #map {
-    width: 324px;
-    height: 355px;
-  }
-
   .page-header__wrapper {
     width: 768px;
     padding: 25px 45px;
@@ -1664,6 +1641,7 @@ button,
   }
 
   .main-intro__wrapper h1 {
+    margin: 0 0 10px 0;
     font-size: 50px;
     line-height: 61px;
     letter-spacing: 3px;
@@ -1682,7 +1660,8 @@ button,
 
   .main-description__wrapper {
     width: 768px;
-    padding: 95px 45px 100px 45px;
+    padding: 95px 45px 95px 45px;
+    grid-column-gap: 10px;
   }
 
   .main-description__block {
@@ -1707,10 +1686,11 @@ button,
   .main-advantages__wrapper h2 {
     font-size: 26px;
     line-height: 39px;
+    bottom: 15px;
   }
 
   .main-advantages__container {
-    grid-column-gap: 15px;
+    grid-column-gap: 30px;
   }
 
   .main-advantages__card {
@@ -1726,7 +1706,7 @@ button,
 
   .main-cruise__wrapper {
     width: 768px;
-    padding: 80px 60px;
+    padding: 80px 60px 108px;
   }
 
   .main-cruise__wrapper h2 {
@@ -1739,10 +1719,11 @@ button,
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (1fr)[4];
     grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 35px;
   }
 
   .main-cruise__card {
-    padding: 35px;
+    padding: 30px;
     width: 309px;
   }
 
@@ -1761,7 +1742,7 @@ button,
 
   .main-ordering__block {
     text-align: center;
-    margin-bottom: 60px;
+    margin: 0 auto 60px;
   }
 
   .main-ordering__block h2 {
@@ -1771,12 +1752,29 @@ button,
 
   .main-contacts__wrapper {
     width: 768px;
-    padding: 100px 45px 85px 45px;
+    padding: 100px 45px 75px 45px;
     grid-column-gap: 20px;
+  }
+
+  .main-contacts__map {
+    width: 324px;
+    height: 355px;
   }
 
   .main-contacts__data {
     width: 325px;
+  }
+
+  .main-contacts__data p {
+    margin-top: 10px;
+  }
+
+  .main-contacts__list {
+    margin: 10px 0;
+  }
+
+  .main-contacts__item p {
+    width: 250px;
   }
 
   .page-footer__wrapper {
@@ -1814,11 +1812,6 @@ button,
 }
 
 @media (max-width: 767px) {
-  #map {
-    width: 290px;
-    height: 316px;
-  }
-
   .container {
     padding: 0 16px;
   }
@@ -1974,6 +1967,8 @@ button,
     line-height: 36px;
     letter-spacing: 0;
     margin: 0 0 40px 0;
+    position: relative;
+    top: 10px;
   }
 
   .main-cruise__container {
@@ -1997,7 +1992,7 @@ button,
 
   .main-ordering__wrapper {
     width: 320px;
-    padding: 65px 15px;
+    padding: 65px 15px 55px;
   }
 
   .main-ordering__block {
@@ -2013,6 +2008,7 @@ button,
 
   .main-ordering__block p {
     letter-spacing: 0;
+    width: inherit;
   }
 
   .main-ordering__container {
@@ -2034,6 +2030,8 @@ button,
   }
 
   .main-contacts__map {
+    width: 290px;
+    height: 316px;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
@@ -2044,10 +2042,6 @@ button,
     -ms-flex-order: 1;
     order: 1;
     width: 290px;
-  }
-
-  .main-contacts__data {
-    margin-top: 0;
   }
 
   .page-footer__wrapper {

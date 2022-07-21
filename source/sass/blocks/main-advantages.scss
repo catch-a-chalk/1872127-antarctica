@@ -51,6 +51,7 @@
     line-height: 42px;
     letter-spacing: 2px;
     margin: 0;
+    padding-top: 120px;
     position: relative;
     bottom: 10px;
 
@@ -71,13 +72,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 40px;
+  grid-gap: 40px;
   justify-content: center;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 120px 0;
 
   @media (max-width: $vp-1365) {
-    grid-column-gap: 30px;
+    grid-gap: 30px;
   }
 
   @media (max-width: $vp-767) {

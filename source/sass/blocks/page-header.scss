@@ -45,6 +45,7 @@
   padding: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   @media (max-width: $vp-767) {
     position: absolute;
@@ -79,6 +80,12 @@
   font-size: 16px;
   line-height: 19.5px;
   color: $color-alice-blue;
+
+  &:hover,
+  &:focus-within {
+    outline: 2px solid $color-alice-blue;
+    outline-offset: 0.3em;
+  }
 
   @media (max-width: $vp-1365) {
     font-weight: 500;

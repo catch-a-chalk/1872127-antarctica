@@ -87,6 +87,12 @@
   line-height: 20px;
   color: $color-alice-blue;
 
+  &:hover,
+  &:focus-within {
+    outline: 2px solid $color-alice-blue;
+    outline-offset: 0.3em;
+  }
+
   @media (max-width: $vp-1365) {
     font-size: 12px;
     line-height: 15px;
@@ -99,6 +105,16 @@
 }
 
 .page-footer__ref {
+  &:hover svg,
+  &:focus-within svg {
+    fill: $color-quartz;
+  }
+
+  &:focus {
+    outline: 2px solid $color-alice-blue;
+    outline-offset: 0.3em;
+  }
+
   &:not(:first-child) {
     margin-left: 28px;
 

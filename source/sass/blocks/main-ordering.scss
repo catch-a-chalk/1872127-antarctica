@@ -62,7 +62,7 @@
 
   h2 {
     position: relative;
-    bottom: 10px;
+    top: 10px;
     font-weight: 700;
     font-size: 40px;
     line-height: 60px;
@@ -72,6 +72,7 @@
     @media (max-width: $vp-1365) {
       font-size: 34px;
       line-height: 51px;
+      top: 0;
     }
 
     @media (max-width: $vp-767) {
@@ -82,12 +83,15 @@
   }
 
   p {
-    width: 345px;
+    width: 390px;
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 1px;
-    margin: 0 auto;
+
+    @media (max-width: $vp-1365) {
+      margin: 0 auto;
+    }
 
     @media (max-width: $vp-767) {
       letter-spacing: 0;
@@ -132,6 +136,12 @@
     padding: 11px 16px;
     border: none;
     color: rgba(1, 28, 64, 0.7);
+
+    &:hover,
+    &:focus-within {
+      outline: 2px solid $color-alice-blue;
+      outline-offset: 0.3em;
+    }
   }
 }
 
@@ -181,4 +191,10 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
+
+  &:hover,
+  &:focus-within {
+    outline: 2px solid $color-alice-blue;
+    outline-offset: 0.3em;
+  }
 }

@@ -1,30 +1,19 @@
 .main-cruise__wrapper {
-  width: $vp-1366;
   margin: 0 auto;
-  padding: 110px 118px 120px 118px;
   display: flex;
   flex-direction: column;
-
-  @media (max-width: $vp-1365) {
-    width: $vp-768;
-    padding: 80px 60px 108px;
-  }
-
-  @media (max-width: $vp-767) {
-    width: $vp-320;
-    padding: 45px 30px 65px 30px;
-  }
 
   h2 {
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
     letter-spacing: 2px;
-    margin: 0 0 50px 0;
+    margin: 98px 0 0 0;
     color: $color-tangaroa;
     text-align: center;
 
-    @media (max-width: $vp-1365) {
+    @media (max-width: $vp-1023) {
+      margin: 79px 0 0 0;
       font-size: 26px;
       line-height: 39px;
     }
@@ -33,7 +22,7 @@
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0;
-      margin: 0 0 40px 0;
+      margin: 47px 0 0 0;
       position: relative;
       top: 10px;
     }
@@ -42,24 +31,23 @@
 
 .main-cruise__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-content: center;
+  padding: 60px 118px 120px 118px;
+  margin: 0;
+  gap: 30px;
 
-  @media (max-width: $vp-1365) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 35px;
+  @media (max-width: $vp-1023) {
+    padding: 60px 60px 100px 60px;
   }
 
   @media (max-width: $vp-767) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    justify-content: center;
+    padding: 40px 25px 65px 25px;
   }
 }
 
 .main-cruise__card {
+  min-height: 386px;
   position: relative;
   padding: 28px 25px 35px;
   color: $color-alice-blue;
@@ -68,8 +56,6 @@
   transition-property: background-color, box-shadow;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
-  width: 260px;
-  min-height: 386px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -102,14 +88,12 @@
     transform: none;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding: 30px;
-    width: 309px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 25px 25px;
-    width: 270px;
+    padding: 25px;
   }
 
   h3 {
@@ -140,6 +124,7 @@
   flex-direction: column;
   flex-grow: 1;
   align-content: space-between;
+  overflow-y: scroll;
 
   h4 {
     font-weight: 500;

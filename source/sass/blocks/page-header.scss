@@ -2,6 +2,11 @@
   .page-header__nav--closed .page-header__list {
     display: none;
   }
+
+  .page-header--nojs .page-header__list {
+    display: block;
+    min-height: fit-content;
+  }
 }
 
 .page-header {
@@ -10,7 +15,6 @@
 }
 
 .page-header__wrapper {
-  width: $vp-1366;
   margin: 0 auto;
   padding: 35px 103px;
   display: flex;
@@ -19,13 +23,11 @@
   align-items: center;
   z-index: 1;
 
-  @media (max-width: $vp-1365) {
-    width: $vp-768;
+  @media (max-width: $vp-1023) {
     padding: 25px 45px;
   }
 
   @media (max-width: $vp-767) {
-    width: $vp-320;
     padding: 20px 15px;
   }
 }
@@ -33,7 +35,7 @@
 .page-header__logotype svg {
   fill: $color-alice-blue;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 38px;
     height: 20px;
   }
@@ -49,29 +51,52 @@
 
   @media (max-width: $vp-767) {
     position: absolute;
+    align-content: flex-end;
     top: 0;
     right: 0;
     flex-direction: column;
     color: $color-tangaroa;
     background-color: $color-alice-blue;
-    padding: 75px 30px 30px 15px;
+    padding: 75px 77px 30px 30px;
     width: calc(100vw - 35px);
     min-height: 100vh;
+    overflow-y: scroll;
   }
 }
 
 .page-header__item {
-  margin-left: 30px;
   letter-spacing: 2px;
 
-  @media (max-width: $vp-1365) {
-    margin-left: 25px;
+  @media (max-width: $vp-1023) {
     letter-spacing: 1px;
   }
 
   @media (max-width: $vp-767) {
     margin: 10px 0;
-    padding: 10px;
+  }
+
+  &:not(:last-child) {
+    margin: 7px 15px;
+
+    @media (max-width: $vp-1023) {
+      margin: 6px 12px;
+    }
+
+    @media (max-width: $vp-767) {
+      margin: 12px 0;
+    }
+  }
+
+  &:last-child {
+    margin: 7px 0 7px 15px;
+
+    @media (max-width: $vp-1023) {
+      margin: 6px 0 6px 12px;
+    }
+
+    @media (max-width: $vp-767) {
+      margin: 12px 0 0 0;
+    }
   }
 }
 
@@ -87,7 +112,7 @@
     outline-offset: 0.3em;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -127,12 +152,13 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0;
   z-index: 10;
 }
 
 .page-header__logotype--inside {
   svg {
-    position: fixed;
+    position: absolute;
     fill: $color-tangaroa;
     z-index: 11;
     left: 60px;
@@ -144,9 +170,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 28px;
-    left: 20px;
-    width: 20px;
+    top: 31px;
+    left: 34px;
+    width: 17px;
     height: 2px;
     background-color: $color-tangaroa;
   }
@@ -174,10 +200,10 @@
   width: 24px;
   height: 2px;
   background-color: $color-alice-blue;
-  box-shadow: 0 6px 0 0 $color-alice-blue, 0 13px 0 0 $color-alice-blue;
+  box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
 }
 
 .page-header__nav--closed + .page-header__toggle:active::before {
   background-color: $color-alice-blue;
-  box-shadow: 0 6px 0 0 $color-alice-blue, 0 13px 0 0 $color-alice-blue;
+  box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
 }

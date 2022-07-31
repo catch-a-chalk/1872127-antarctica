@@ -4,7 +4,7 @@ const navLogo = document.querySelector('.page-header__logotype');
 
 export default function initNav() {
   if (navMain && navToggle && navLogo) {
-    navMain.classList.remove('page-header__nav--nojs');
+    document.querySelector('.page-header').classList.remove('page-header--nojs');
     navLogo.classList.remove('page-header__logotype--inside');
 
     navToggle.addEventListener('click', () => {

@@ -15,7 +15,7 @@
     object-fit: cover;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     min-height: 588px;
   }
 
@@ -25,8 +25,8 @@
 }
 
 .main-advantages__wrapper {
-  width: $vp-1366;
   margin: 0 auto;
+  padding: 120px 103px;
   display: grid;
   grid-row-gap: 40px;
   justify-content: center;
@@ -34,14 +34,13 @@
   align-self: center;
   z-index: 1;
 
-  @media (max-width: $vp-1365) {
-    width: $vp-768;
+  @media (max-width: $vp-1023) {
+    padding: 100px 45px;
   }
 
   @media (max-width: $vp-767) {
-    width: $vp-320;
     grid-row-gap: 30px;
-    padding: 65px 15px;
+    padding: 58px 15px 72px;
   }
 
   h2 {
@@ -51,11 +50,10 @@
     line-height: 42px;
     letter-spacing: 2px;
     margin: 0;
-    padding-top: 120px;
     position: relative;
     bottom: 10px;
 
-    @media (max-width: $vp-1365) {
+    @media (max-width: $vp-1023) {
       font-size: 26px;
       line-height: 39px;
       bottom: 15px;
@@ -64,60 +62,62 @@
     @media (max-width: $vp-767) {
       font-size: 24px;
       line-height: 36px;
+      bottom: 0;
     }
   }
 }
 
 .main-advantages__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-template-rows: 1fr;
   grid-gap: 40px;
   justify-content: center;
+  align-items: stretch;
   margin: 0 auto;
-  padding: 0 0 120px 0;
+  padding: 0;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     grid-gap: 30px;
   }
 
   @media (max-width: $vp-767) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 33%);
     grid-column-gap: none;
     grid-row-gap: 30px;
   }
 }
 
 .main-advantages__card {
-  width: 360px;
+  aspect-ratio: 360 / 241;
   box-sizing: border-box;
   padding: 30px;
   background-color: $color-alice-blue;
   display: grid;
   grid-template-rows: 36px auto auto;
+  align-content: flex-start;
   align-items: center;
   letter-spacing: 1px;
 
-  @media (max-width: $vp-1365) {
-    width: 206px;
+  @media (max-width: $vp-1023) {
+    // aspect-ratio: 206 / 310;
     padding: 20px;
     letter-spacing: 0;
   }
 
   @media (max-width: $vp-767) {
-    width: 290px;
+    // aspect-ratio: 290 / 249;
     padding: 8px 20px 15px 20px;
   }
 
   h3 {
-    margin: 18px 0 0 0;
+    margin: 12px 0 6px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
     align-self: baseline;
 
-    @media (max-width: $vp-1365) {
+    @media (max-width: $vp-1023) {
       line-height: 26px;
       margin: 10px 0;
     }

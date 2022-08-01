@@ -2,4 +2,16 @@
   font-family: "Montserrat", "Open Sans", sans-serif;
   font-style: normal;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  --side-offset: calc(50px - 580px);
+
+  @media (max-width: $vp-1023) {
+    --side-offset: 45px;
+  }
+
+  @media (max-width: $vp-767) {
+    --side-offset: 15px;
+  }
 }

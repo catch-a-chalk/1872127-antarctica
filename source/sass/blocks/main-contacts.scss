@@ -4,64 +4,65 @@
 }
 
 .main-contacts__wrapper {
-  width: $vp-1366;
   margin: 0 auto;
   padding: 120px 103px;
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-column-gap: 80px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 
-  @media (max-width: $vp-1365) {
-    width: $vp-768;
-    padding: 100px 45px 75px 45px;
-    grid-column-gap: 20px;
+  @media (max-width: $vp-1023) {
+    padding: 100px 45px;
   }
 
   @media (max-width: $vp-767) {
-    width: $vp-320;
-    padding: 40px 15px 65px 15px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 50%);
+    padding: 65px 15px;
+    flex-direction: column;
   }
 }
 
 .main-contacts__map {
   width: 560px;
   height: 306px;
-  align-self: center;
+  margin-right: 50px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 324px;
-    height: 355px;
+    height: 335px;
+    margin-right: 15px;
   }
 
   @media (max-width: $vp-767) {
-    width: 290px;
+    width: clamp(290px, 75%, 600px);
     height: 316px;
     order: 2;
+    margin: 0;
   }
 }
 
 .main-contacts__data {
-  width: 500px;
+  max-width: 486px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-left: 50px;
+
+  @media (max-width: $vp-1023) {
+    max-width: 325px;
+    margin-left: 15px;
+  }
+
+  @media (max-width: $vp-767) {
+    max-width: clamp(290px, 75%, 600px);
+    order: 1;
+    margin: 0;
+  }
 
   .main-contacts__text,
   a {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-  }
-
-  @media (max-width: $vp-1365) {
-    width: 325px;
-  }
-
-  @media (max-width: $vp-767) {
-    order: 1;
-    width: 290px;
   }
 
   p {
@@ -72,8 +73,8 @@
     line-height: 27px;
     word-spacing: 6px;
 
-    @media (max-width: $vp-1365) {
-      margin-top: 10px;
+    @media (max-width: $vp-767) {
+      margin-top: -8px;
     }
   }
 }
@@ -83,7 +84,7 @@
   flex-direction: column;
   padding: 0;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin: 10px 0;
   }
 }
@@ -91,6 +92,7 @@
 .main-contacts__item {
   display: flex;
   margin-bottom: 20px;
+  align-items: baseline;
 
   a[href^="tel:"] {
     color: $color-tangaroa;
@@ -100,7 +102,7 @@
     margin: 0;
     word-spacing: 0;
 
-    @media (max-width: $vp-1365) {
+    @media (max-width: $vp-1023) {
       width: 250px;
     }
   }

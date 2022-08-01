@@ -59,8 +59,9 @@
     background-color: $color-alice-blue;
     padding: 75px 77px 30px 30px;
     width: calc(100vw - 35px);
-    min-height: 100vh;
-    overflow-y: scroll;
+    height: 100vh;
+    overflow-y: auto;
+    flex-wrap: nowrap;
   }
 }
 

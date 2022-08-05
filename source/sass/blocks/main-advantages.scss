@@ -40,7 +40,7 @@
 
   @media (max-width: $vp-767) {
     grid-row-gap: 30px;
-    padding: 58px 15px 72px;
+    padding: 58px 15px 68px;
   }
 
   h2 {
@@ -56,7 +56,8 @@
     @media (max-width: $vp-1023) {
       font-size: 26px;
       line-height: 39px;
-      bottom: 15px;
+      bottom: 12px;
+      letter-spacing: 1px;
     }
 
     @media (max-width: $vp-767) {
@@ -89,7 +90,6 @@
 }
 
 .main-advantages__card {
-  aspect-ratio: 360 / 241;
   box-sizing: border-box;
   padding: 30px;
   background-color: $color-alice-blue;
@@ -100,14 +100,8 @@
   letter-spacing: 1px;
 
   @media (max-width: $vp-1023) {
-    // aspect-ratio: 206 / 310;
-    padding: 20px;
+    padding: 21px;
     letter-spacing: 0;
-  }
-
-  @media (max-width: $vp-767) {
-    // aspect-ratio: 290 / 249;
-    padding: 8px 20px 15px 20px;
   }
 
   h3 {
@@ -124,7 +118,7 @@
 
     @media (max-width: $vp-767) {
       line-height: 25px;
-      margin: 19px 0;
+      margin: 10px 0;
       width: 185px;
     }
   }
@@ -137,7 +131,7 @@
     align-self: baseline;
 
     @media (max-width: $vp-767) {
-      width: 230px;
+      // width: 230px;
     }
   }
 }

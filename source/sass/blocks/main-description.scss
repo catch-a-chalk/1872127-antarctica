@@ -16,7 +16,7 @@
   }
 
   @media (max-width: $vp-1023) {
-    padding: 95px 45px 95px 45px;
+    padding: 95px 45px 87px;
     grid-column-gap: 30px;
   }
 
@@ -31,16 +31,16 @@
   align-self: center;
 
   h2 {
-    margin-top: 0;
+    margin-top: -6px;
     margin-bottom: 24px;
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
     letter-spacing: 1px;
+    word-spacing: 5px;
 
     @media (max-width: $vp-1023) {
-      width: 200px;
-      margin: 0 0 10px 0;
+      width: 220px;
       font-size: 26px;
       line-height: 36px;
     }
@@ -48,6 +48,7 @@
     @media (max-width: $vp-767) {
       font-size: 24px;
       line-height: 34px;
+      margin-bottom: 14px;
     }
   }
 
@@ -57,8 +58,14 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 1px;
-    word-spacing: 5px;
+    word-spacing: 3px;
     position: relative;
+
+    @media (max-width: $vp-1023) {
+      letter-spacing: 0;
+      bottom: 8px;
+      word-spacing: 10px;
+    }
 
     @media (max-width: $vp-767) {
       top: 5px;

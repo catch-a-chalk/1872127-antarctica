@@ -8,12 +8,12 @@
     font-size: 28px;
     line-height: 42px;
     letter-spacing: 2px;
-    margin: 98px 0 0 0;
+    margin: 107px 0 0 0;
     color: $color-tangaroa;
     text-align: center;
 
     @media (max-width: $vp-1023) {
-      margin: 79px 0 0 0;
+      margin: 87px 0 0;
       font-size: 26px;
       line-height: 39px;
     }
@@ -21,7 +21,7 @@
     @media (max-width: $vp-767) {
       font-size: 24px;
       line-height: 36px;
-      letter-spacing: 0;
+      letter-spacing: 1px;
       margin: 47px 0 0 0;
       position: relative;
       top: 10px;
@@ -33,12 +33,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   justify-content: center;
-  padding: 60px 118px 120px 118px;
+  padding: 51px 118px 120px 118px;
   margin: 0;
   gap: 30px;
 
   @media (max-width: $vp-1023) {
-    padding: 60px 60px 100px 60px;
+    padding: 51px 60px 100px;
   }
 
   @media (max-width: $vp-767) {
@@ -47,7 +47,7 @@
 }
 
 .main-cruise__card {
-  min-height: 386px;
+  aspect-ratio: 260 / 386;
   position: relative;
   padding: 28px 25px 35px;
   color: $color-alice-blue;
@@ -89,10 +89,13 @@
   }
 
   @media (max-width: $vp-1023) {
+    aspect-ratio: 309 / 386;
     padding: 30px;
+    padding-left: 40px;
   }
 
   @media (max-width: $vp-767) {
+    aspect-ratio: 270 / 386;
     padding: 25px;
   }
 
@@ -124,7 +127,7 @@
   flex-direction: column;
   flex-grow: 1;
   align-content: space-between;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   h4 {
     font-weight: 500;
@@ -135,7 +138,7 @@
     font-weight: 400;
     color: $color-quartz;
     padding: 0;
-    margin: 0 0 13px 0;
+    margin: 0 0 12px 0;
   }
 }
 
@@ -161,6 +164,11 @@
   &:focus-within {
     outline: 2px solid $color-alice-blue;
     outline-offset: 0.3em;
+  }
+
+  @media (max-width: $vp-767) {
+    position: relative;
+    bottom: 10px;
   }
 }
 

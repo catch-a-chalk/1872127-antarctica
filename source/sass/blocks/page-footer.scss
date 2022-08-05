@@ -7,7 +7,7 @@
   padding: 50px 103px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 
   @media (max-width: $vp-1023) {
     padding: 40px 45px;
@@ -37,6 +37,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-right: auto;
+  align-self: start;
 
   @media (max-width: $vp-767) {
     flex-direction: column;
@@ -45,10 +46,12 @@
 }
 
 .page-footer__logotype {
-  margin-right: 40px;
+  margin-right: 25px;
+  align-self: flex-start;
 
   @media (max-width: $vp-1023) {
-    margin-right: 25px;
+    margin-right: 20px;
+    align-self: inherit;
   }
 
   @media (max-width: $vp-767) {
@@ -57,35 +60,16 @@
 }
 
 .page-footer__item {
-  margin: 0;
   letter-spacing: 2px;
-
-  &:not(:first-child) {
-    margin: 9px 16px;
-  }
-
-  &:first-child {
-    margin: 9px 16px 9px 0;
-  }
+  margin: 9px 16px;
 
   @media (max-width: $vp-1023) {
-    &:not(:first-child) {
-      margin: 6px 9px;
-    }
-
-    &:first-child {
-      margin: 6px 9px 6px 0;
-    }
+    letter-spacing: 1px;
+    margin: 6px 9px;
   }
 
   @media (max-width: $vp-767) {
-    &:not(:first-child) {
-      margin: 5px 0;
-    }
-
-    &:first-child {
-      margin: 0 0 5px 0;
-    }
+    margin: 5px 0;
   }
 }
 
@@ -109,9 +93,15 @@
 
 .page-footer__social {
   display: flex;
+  flex-wrap: wrap;
+  min-width: 122px;
+
+  @media (max-width: $vp-1023) {
+    min-width: 88px;
+  }
 
   @media (max-width: $vp-767) {
-    flex-wrap: wrap;
+    min-width: 84px;
   }
 }
 

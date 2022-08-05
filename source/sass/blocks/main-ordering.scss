@@ -16,8 +16,8 @@
 }
 
 .main-ordering__wrapper {
-  margin: 0 auto;
-  padding: 52px 161px 46px 161px;
+  margin: 0 63px;
+  padding: 52px 100px 50px;
   display: flex;
   flex-grow: 1;
   flex-direction: row;
@@ -27,37 +27,36 @@
 
   @media (max-width: $vp-1023) {
     flex-direction: column;
-    padding: 91px;
+    padding: 50px 50px 102px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 65px 15px 55px;
+    margin: 0 15px;
+    padding: 25px 15px 68px;
   }
 }
 
 .main-ordering__block {
   @media (max-width: $vp-1023) {
     text-align: center;
-    margin: 0 auto 60px;
+    margin: 35px auto 60px;
   }
 
   @media (max-width: $vp-767) {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
   }
 
   h2 {
-    position: relative;
-    top: 5px;
     font-weight: 700;
     font-size: 40px;
     line-height: 60px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin: 0;
 
     @media (max-width: $vp-1023) {
       font-size: 34px;
       line-height: 51px;
-      top: 0;
+      letter-spacing: 2px;
     }
 
     @media (max-width: $vp-767) {
@@ -73,14 +72,18 @@
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 1px;
+    margin-top: 7px;
+    position: relative;
 
     @media (max-width: $vp-1023) {
       margin: 0 auto;
+      top: 7px;
     }
 
     @media (max-width: $vp-767) {
       letter-spacing: 0;
       width: inherit;
+      top: 0;
     }
   }
 }
@@ -92,21 +95,22 @@
 
   @media (max-width: $vp-767) {
     width: clamp(290px, 75%, 600px);
-    padding: 40px 30px;
+    padding: 35px 30px;
   }
 
   h3 {
-    position: relative;
-    bottom: 10px;
     color: $color-alice-blue;
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 27px;
     margin: 0;
+    position: relative;
+    bottom: 10px;
 
     @media (max-width: $vp-767) {
       text-align: center;
+      bottom: 0;
     }
   }
 }
@@ -180,7 +184,7 @@
 }
 
 .main-ordering__button {
-  padding: 12px 15px;
+  padding: 10px 15px;
   background-color: $color-alice-blue;
   border: none;
   width: 100%;

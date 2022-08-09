@@ -25,12 +25,12 @@
 .main-contacts__map {
   width: 560px;
   height: 306px;
-  margin-right: 50px;
+  margin: 0 15px 0 0;
 
   @media (max-width: $vp-1023) {
     width: 324px;
     height: 335px;
-    margin-right: 15px;
+    margin-right: 40px;
   }
 
   @media (max-width: $vp-767) {
@@ -45,11 +45,12 @@
   max-width: 486px;
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+  margin: 0 auto;
+  margin-right: 14px;
 
   @media (max-width: $vp-1023) {
     max-width: 325px;
-    margin-left: 20px;
+    margin-right: 0;
   }
 
   @media (max-width: $vp-767) {
@@ -67,7 +68,7 @@
 
   p {
     width: inherit;
-    margin-top: 35px;
+    margin-top: 30px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;

@@ -22,7 +22,7 @@
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 1px;
-      margin: 47px 0 0 0;
+      margin: 45px 0 0 0;
       position: relative;
       top: 10px;
     }
@@ -33,21 +33,25 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   justify-content: center;
+  justify-items: center;
   padding: 51px 118px 120px 118px;
   margin: 0;
   gap: 30px;
 
   @media (max-width: $vp-1023) {
+    grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
     padding: 51px 60px 100px;
   }
 
   @media (max-width: $vp-767) {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     padding: 40px 25px 65px 25px;
   }
 }
 
 .main-cruise__card {
   aspect-ratio: 260 / 386;
+  height: 386px;
   position: relative;
   padding: 28px 25px 35px;
   color: $color-alice-blue;

@@ -5,7 +5,8 @@
 .page-footer__wrapper {
   margin: 0 auto;
   padding: 50px 103px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
   justify-content: space-between;
   align-items: baseline;
 
@@ -15,7 +16,7 @@
 
   @media (max-width: $vp-767) {
     padding: 40px 15px;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: flex-start;
   }
 }
@@ -41,7 +42,7 @@
 
   @media (max-width: $vp-767) {
     flex-direction: column;
-    margin: 15px 0 5px;
+    margin: 8px 0 5px;
   }
 }
 

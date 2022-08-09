@@ -118,7 +118,7 @@
 
     @media (max-width: $vp-767) {
       line-height: 25px;
-      margin: 10px 0;
+      margin: 10px 0 11px;
       width: 185px;
     }
   }
@@ -129,9 +129,12 @@
     line-height: 20px;
     margin: 0;
     align-self: baseline;
+  }
+}
 
-    @media (max-width: $vp-767) {
-      // width: 230px;
-    }
+.main-advantages__logo {
+  @media (max-width: $vp-767) {
+    position: relative;
+    right: 4px;
   }
 }

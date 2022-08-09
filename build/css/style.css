@@ -772,7 +772,7 @@ button,
 
 .page-header__wrapper {
   margin: 0 auto;
-  padding: 35px 103px;
+  padding: 42px 103px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -791,6 +791,13 @@ button,
 
 .page-header__void {
   display: none;
+}
+
+.page-header__logotype {
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+  position: relative;
+  top: 3px;
 }
 
 .page-header__logotype svg {
@@ -866,7 +873,7 @@ button,
   position: absolute;
   fill: #011c40;
   z-index: 11;
-  left: 60px;
+  left: 40px;
 }
 
 .page-header__nav--opened + .page-header__toggle::before,
@@ -924,8 +931,8 @@ button,
 }
 
 .main-intro {
-  min-height: 654px;
-  padding: 266px calc(50vw - 485px) 60px;
+  min-height: 660px;
+  padding: 271px calc(50vw - 485px) 60px;
   background-color: #011c40;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1138,6 +1145,7 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  justify-items: center;
   padding: 51px 118px 120px 118px;
   margin: 0;
   gap: 30px;
@@ -1145,6 +1153,7 @@ button,
 
 .main-cruise__card {
   aspect-ratio: 260 / 386;
+  height: 386px;
   position: relative;
   padding: 28px 25px 35px;
   color: #f9fbfd;
@@ -1381,7 +1390,7 @@ button,
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 1px;
-  margin-top: 7px;
+  margin-top: 8px;
   position: relative;
 }
 
@@ -1408,7 +1417,7 @@ button,
 
 .main-ordering__form input {
   width: 100%;
-  padding: 11px 16px;
+  padding: 10px 16px;
   border: none;
   color: rgba(1, 28, 64, 0.7);
 }
@@ -1430,7 +1439,7 @@ button,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  margin-bottom: 25px;
+  margin-bottom: 31px;
   color: #f9fbfd;
   font-weight: 400;
   font-size: 10px;
@@ -1528,7 +1537,7 @@ button,
 .main-contacts__map {
   width: 560px;
   height: 306px;
-  margin-right: 50px;
+  margin: 0 15px 0 0;
 }
 
 .main-contacts__data {
@@ -1540,7 +1549,8 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-left: 50px;
+  margin: 0 auto;
+  margin-right: 14px;
 }
 
 .main-contacts__data .main-contacts__text,
@@ -1552,7 +1562,7 @@ button,
 
 .main-contacts__data p {
   width: inherit;
-  margin-top: 35px;
+  margin-top: 30px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -1601,9 +1611,10 @@ button,
 .page-footer__wrapper {
   margin: 0 auto;
   padding: 50px 103px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10fr 1fr;
+  grid-template-columns: 1fr 10fr 1fr;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1715,6 +1726,11 @@ button,
     padding: 20px 45px 25px;
   }
 
+  .page-header__logotype {
+    top: 10px;
+    left: 3px;
+  }
+
   .page-header__logotype svg {
     width: 38px;
     height: 20px;
@@ -1815,6 +1831,7 @@ button,
   }
 
   .main-cruise__container {
+    grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
     padding: 51px 60px 100px;
   }
 
@@ -1855,12 +1872,12 @@ button,
   .main-contacts__map {
     width: 324px;
     height: 335px;
-    margin-right: 15px;
+    margin-right: 40px;
   }
 
   .main-contacts__data {
     max-width: 325px;
-    margin-left: 20px;
+    margin-right: 0;
   }
 
   .main-contacts__list {
@@ -1966,6 +1983,15 @@ button,
     left: 35px;
   }
 
+  .page-header__logotype {
+    top: -3px;
+  }
+
+  .page-header__logotype svg {
+    width: 42px;
+    height: 22px;
+  }
+
   .page-header__list {
     position: absolute;
     -ms-flex-line-pack: end;
@@ -1978,7 +2004,7 @@ button,
     flex-direction: column;
     color: #011c40;
     background-color: #f9fbfd;
-    padding: 75px 77px 30px 30px;
+    padding: 70px 30px 30px calc(80vw - 225px);
     width: calc(100vw - 35px);
     height: 100vh;
     overflow-y: auto;
@@ -1988,12 +2014,10 @@ button,
 
   .page-header__item {
     margin: 10px 0;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
   }
 
   .page-header__item:not(:last-child) {
-    margin: 12px 0;
+    margin: 13px 0;
   }
 
   .page-header__item:last-child {
@@ -2078,20 +2102,26 @@ button,
 
   .main-advantages__card h3 {
     line-height: 25px;
-    margin: 10px 0;
+    margin: 10px 0 11px;
     width: 185px;
+  }
+
+  .main-advantages__logo {
+    position: relative;
+    right: 4px;
   }
 
   .main-cruise__wrapper h2 {
     font-size: 24px;
     line-height: 36px;
     letter-spacing: 1px;
-    margin: 47px 0 0 0;
+    margin: 45px 0 0 0;
     position: relative;
     top: 10px;
   }
 
   .main-cruise__container {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     padding: 40px 25px 65px 25px;
   }
 
@@ -2111,16 +2141,17 @@ button,
   }
 
   .main-ordering__block {
-    margin-bottom: 26px;
+    margin-bottom: 30px;
   }
 
   .main-ordering__block h2 {
     font-size: 24px;
     line-height: 31px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   .main-ordering__block p {
+    line-height: 25px;
     letter-spacing: 0;
     width: inherit;
     top: 0;
@@ -2128,12 +2159,16 @@ button,
 
   .main-ordering__container {
     width: clamp(290px, 75%, 600px);
-    padding: 35px 30px;
+    padding: 35px 30px 40px;
   }
 
   .main-ordering__container h3 {
     text-align: center;
     bottom: 0;
+  }
+
+  .main-ordering__checkbox {
+    margin-bottom: 28px;
   }
 
   .main-contacts__wrapper {
@@ -2171,10 +2206,8 @@ button,
 
   .page-footer__wrapper {
     padding: 40px 15px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -2185,7 +2218,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin: 15px 0 5px;
+    margin: 8px 0 5px;
   }
 
   .page-footer__logotype {

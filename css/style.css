@@ -1996,7 +1996,7 @@ button,
   .page-header__void {
     width: calc(100vw - 35px);
     background: #f9fbfd;
-    z-index: 4;
+    z-index: 3;
     position: relative;
     height: 70px;
     left: 35px;

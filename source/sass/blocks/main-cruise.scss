@@ -40,7 +40,7 @@
 
   @media (max-width: $vp-1023) {
     grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
-    padding: 51px 60px 100px;
+    padding: 51px 56px 100px 64px;
   }
 
   @media (max-width: $vp-767) {
@@ -94,8 +94,7 @@
 
   @media (max-width: $vp-1023) {
     aspect-ratio: 309 / 386;
-    padding: 30px;
-    padding-left: 40px;
+    padding: 30px 35px 35px 35px;
   }
 
   @media (max-width: $vp-767) {

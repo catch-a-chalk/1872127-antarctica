@@ -30,7 +30,7 @@
   @media (max-width: $vp-1023) {
     width: 324px;
     height: 335px;
-    margin-right: 40px;
+    margin-right: 20px;
   }
 
   @media (max-width: $vp-767) {
@@ -50,7 +50,7 @@
 
   @media (max-width: $vp-1023) {
     max-width: 325px;
-    margin-right: 0;
+    margin-right: -5px;
   }
 
   @media (max-width: $vp-767) {
@@ -116,4 +116,9 @@
 .main-contacts__logo {
   float: left;
   margin-right: 10px;
+
+  @media (max-width: $vp-1023) {
+    position: relative;
+    top: 5px;
+  }
 }

@@ -21,7 +21,7 @@
 
 .page-header__wrapper {
   margin: 0 auto;
-  padding: 42px 103px;
+  padding: 32px 103px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,7 +61,8 @@
   }
 
   @media (max-width: $vp-767) {
-    top: -3px;
+    top: 0;
+    left: 0;
   }
 
   svg {

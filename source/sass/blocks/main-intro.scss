@@ -1,6 +1,6 @@
 .main-intro {
-  min-height: 660px;
-  padding: 271px calc(50vw - 485px) 60px;
+  min-height: 650px;
+  padding: 261px calc(50vw - 485px) 60px;
   background: {
     color: $color-tangaroa;
     repeat: no-repeat;
@@ -23,7 +23,7 @@
   @media (max-width: $vp-767) {
     --bg: var(--mob-bg);
     min-height: 500px;
-    padding: 174px 15px 30px;
+    padding: 178px 15px 30px;
   }
 }
 

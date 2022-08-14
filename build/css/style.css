@@ -772,7 +772,7 @@ button,
 
 .page-header__wrapper {
   margin: 0 auto;
-  padding: 42px 103px;
+  padding: 32px 103px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -931,8 +931,8 @@ button,
 }
 
 .main-intro {
-  min-height: 660px;
-  padding: 271px calc(50vw - 485px) 60px;
+  min-height: 650px;
+  padding: 261px calc(50vw - 485px) 60px;
   background-color: #011c40;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1466,7 +1466,7 @@ button,
 .main-ordering__checkbox input[type="checkbox"] + span {
   width: 18px;
   height: 18px;
-  margin-right: 5px;
+  margin-right: 9px;
   background-color: #f9fbfd;
 }
 
@@ -1617,7 +1617,7 @@ button,
 
 .page-footer__wrapper {
   margin: 0 auto;
-  padding: 50px 103px;
+  padding: 48px 103px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 10fr 1fr;
@@ -1996,14 +1996,15 @@ button,
   .page-header__void {
     width: calc(100vw - 35px);
     background: #f9fbfd;
-    z-index: 3;
+    z-index: 4;
     position: relative;
     height: 70px;
     left: 35px;
   }
 
   .page-header__logotype {
-    top: -3px;
+    top: 0;
+    left: 0;
   }
 
   .page-header__logotype svg {
@@ -2067,7 +2068,7 @@ button,
   .main-intro {
     --bg: var(--mob-bg);
     min-height: 500px;
-    padding: 174px 15px 30px;
+    padding: 178px 15px 30px;
   }
 
   .main-intro__wrapper h1 {
@@ -2081,7 +2082,7 @@ button,
   }
 
   .main-description__wrapper {
-    padding: 55px 15px 64px;
+    padding: 57px 15px 64px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-row-gap: 40px;
@@ -2141,7 +2142,7 @@ button,
 
   .main-cruise__container {
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    padding: 40px 25px 65px 25px;
+    padding: 43px 25px 65px;
   }
 
   .main-cruise__card {
@@ -2156,7 +2157,7 @@ button,
 
   .main-ordering__wrapper {
     margin: 0 15px;
-    padding: 25px 15px 68px;
+    padding: 25px 15px 65px;
   }
 
   .main-ordering__block {
@@ -2187,7 +2188,7 @@ button,
   }
 
   .main-ordering__checkbox {
-    margin-bottom: 28px;
+    margin-bottom: 22px;
   }
 
   .main-contacts__wrapper {
